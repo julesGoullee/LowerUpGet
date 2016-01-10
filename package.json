@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "api:start": "node services/api/api.js",
     "lint": "eslint . --fix"
   },
   "keywords": [
