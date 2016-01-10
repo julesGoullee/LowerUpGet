@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "api:start": "node services/api/api.js",
+    "page-executor:start": "node services/pageExecutor/singleInstance.js",
     "lint": "eslint . --fix"
   },
   "keywords": [
