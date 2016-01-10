@@ -10,6 +10,7 @@
     "start": "node index.js",
     "api:start": "node services/api/api.js",
     "page-executor:start": "node services/pageExecutor/singleInstance.js",
+    "page-executor:start-workers": "node services/pageExecutor/workers.js",
     "lint": "eslint . --fix"
   },
   "keywords": [
