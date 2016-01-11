@@ -1,2 +1,1 @@
-web: bash ./start_heroku.sh
-worker: node services/pageExecutor/workers.js
+app: bash ./conifg/start_heroku.sh

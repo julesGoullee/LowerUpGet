@@ -4,7 +4,7 @@
 const Url = require('url');
 const http = require('http');
 
-const config = require('../../config/config');
+const config = require('../../../config/config');
 
 
 module.exports = (cb) => {
@@ -32,7 +32,7 @@ module.exports = (cb) => {
           'Content-length': Buffer.byteLength(err.toString(), 'utf-8')
         });
         
-        res.end(err.toString());
+        res.end(err.toString() );
 
       });
 

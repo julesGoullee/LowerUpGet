@@ -54,6 +54,7 @@ function getPureHtml(pageExecutorRequest){
         if(!err){
           
           err = new Error(`Error PageExecutor: code: ${resPageExecutor.statusCode}, body: ${pureHtml}`);
+
         }
         
         return reject(`code: ${err.code}, error: ${err}`);
@@ -109,9 +110,7 @@ function getWebsite(req, res, next){
 
     const timePageExecutor = Date.now() - startTimePageExecutor;
 
-    console.log(`Api process for address ${req.url.query.address}
-       Time: ${timePageExecutor}ms
-      `);
+    console.log(`Api process for address: ${req.url.query.address}, Time: ${timePageExecutor}m`);
 
     const headers = Object.assign({}, {
       'Access-Control-Allow-Origin': '*',

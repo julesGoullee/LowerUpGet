@@ -1,0 +1,30 @@
+{
+  "apps" : [
+    {
+      "name"      : "web-api",
+      "script"    : "./services/api/api.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      },
+      "instances"  : 1,
+      "exec_mode"  : "cluster_mode",
+      "error_file" : "./logs/api-err.log",
+      "out_file"   : "./logs/api-out.log",
+      "pid_file"   : "./logs/api.pid"
+    },
+    {
+      "name"      : "p-exec",
+      "script"    : "./services/pageExecutor/index.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 4000
+      },
+      "instances"  : 1,
+      "exec_mode"  : "cluster_mode",
+      "error_file" : "./logs/p-exec-err.log",
+      "out_file"   : "./logs/p-exec-out.log",
+      "pid_file"   : "./logs/p-exec.pid"
+    }
+  ]
+}

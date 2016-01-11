@@ -1,5 +1,6 @@
 'use strict';
 
+//const nbCpu = require('os').cpus().length;
 
 module.exports = {
   'PageExecutor': {
@@ -11,6 +12,6 @@ module.exports = {
       'active': true
     },
     'address': 'http://localhost',
-    'port': 3000
+    'port': process.env.PORT || 3000
   }
 };

@@ -1,7 +1,7 @@
 'use strict';
 
-const pageExecutor = require('./pageExecutor');
-const httpServe = require('./httpServe');
+const pageExecutor = require('./modules/pageExecutor');
+const httpServe = require('./modules/httpServe');
 const Promise = require('bluebird');
 
 
@@ -32,4 +32,4 @@ function listenWorker(){
   
 }
 
-module.exports = listenWorker;
+listenWorker();

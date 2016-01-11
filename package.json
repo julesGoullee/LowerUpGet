@@ -9,7 +9,8 @@
   "scripts": {
     "api:start": "node services/api/api.js",
     "page-executor:start": "node services/pageExecutor/singleInstance.js",
-    "page-executor:start-workers": "node services/pageExecutor/workers.js",
+    "pm2:start": "npm run logs:clean && pm2 start config/pm2-app.json",
+    "logs:clean": "rm -R ./logs/**",
     "lint": "eslint . --fix"
   },
   "keywords": [
@@ -26,6 +27,7 @@
     "bluebird": "^3.1.1",
     "forever": "^0.15.1",
     "jsdom": "^7.2.2",
+    "pm2": "^1.0.0",
     "request": "^2.67.0"
   },
   "devDependencies": {

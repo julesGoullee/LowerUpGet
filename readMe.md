@@ -25,6 +25,15 @@ npm install
 npm start
 ```
 
+##Deploiement with pm2
+
+Create pm2 app and start:
+
+```bash
+npm run pm2:start
+```
+
+
 ##Demo:
 [https://lower-up-get.herokuapp.com](https://lower-up-get.herokuapp.com)
 

@@ -4,7 +4,7 @@ const http = require('http');
 const config = require('../../config/config');
 
 const middlewaresError = require('./middlewares/error');
-const port = process.env.PORT || config.frontEnd.port;
+const port = config.frontEnd.port;
 const middlewares = new Set();
 
 middlewares.add(require('./middlewares/parser') );
