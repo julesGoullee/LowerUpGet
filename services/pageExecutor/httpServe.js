@@ -25,11 +25,14 @@ module.exports = (cb) => {
         res.write(htmlContent);
         res.end();
 
-      }).error( (err) => {
+      }).catch( (err) => {
 
-        console.error(err);
-        res.writeHead(500);
-        res.end(err);
+        res.writeHead(500, {
+          'Content-Type': 'text/html; charset=UTF-8',
+          'Content-length': Buffer.byteLength(err.toString(), 'utf-8')
+        });
+        
+        res.end(err.toString());
 
       });
 

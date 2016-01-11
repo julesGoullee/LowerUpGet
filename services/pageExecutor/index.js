@@ -20,7 +20,7 @@ function listenWorker(){
 
         resolve(htmlContent);
 
-      }).error( (err) => {
+      }).catch( (err) => {
 
         reject(err);
 
