@@ -10,7 +10,7 @@ module.exports = {
     'blockBindings': true,                        // enable let and const (aka block bindings)
     'classes': false,                             // enable classes
     'defaultParams': false,                       // enable default function parameters
-    'destructuring': false,                       // enable destructuring
+    'destructuring': true,                       // enable destructuring
     'forOf': true,                                // enable for-of loops
     'generators': false,                          // enable generators
     'modules': false,                             // enable modules and global strict mode
