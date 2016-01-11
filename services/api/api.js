@@ -3,13 +3,14 @@
 const http = require('http');
 const config = require('../../config/config');
 
+const middlewaresError = require('./middlewares/error');
 const port = process.env.PORT || config.frontEnd.port;
 const middlewares = new Set();
 
 middlewares.add(require('./middlewares/parser') );
 middlewares.add(require('./middlewares/example') );
 middlewares.add(require('./middlewares/getWebsite') );
-middlewares.add(require('./middlewares/error') );
+middlewares.add(middlewaresError);
 
 /**
  *  Launch series middlewares
@@ -29,7 +30,13 @@ function execMiddlewares(req, res, currentMiddleware, middlewaresIterator){
 
   console.log(`Exec middleware ${currentMiddleware.value[1].name}`);
 
-  currentMiddleware.value[1](req, res, () => {
+  currentMiddleware.value[1](req, res, (err) => {
+    
+    if(err){
+      
+      return middlewaresError(req, res, Function, err);
+      
+    }
     
     execMiddlewares(req, res, middlewaresIterator.next(), middlewaresIterator);
     
