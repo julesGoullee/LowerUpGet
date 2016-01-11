@@ -7,7 +7,6 @@
     "npm": "2.14.7"
   },
   "scripts": {
-    "start": "node index.js",
     "api:start": "node services/api/api.js",
     "page-executor:start": "node services/pageExecutor/singleInstance.js",
     "page-executor:start-workers": "node services/pageExecutor/workers.js",
@@ -25,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.1.1",
+    "forever": "^0.15.1",
     "jsdom": "^7.2.2",
     "request": "^2.67.0"
   },

@@ -1,2 +1,2 @@
-web: node services/api/api.js
+web: bash ./start_heroku.sh
 worker: node services/pageExecutor/workers.js
