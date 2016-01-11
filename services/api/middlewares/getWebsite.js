@@ -1,8 +1,9 @@
 'use strict';
 
 const request = require('request');
+const Promise = require('bluebird');
 const config = require('../../../config/config');
-
+const cacheApi = require('../cache/index');
 
 /**
  * Check address params to calling api
@@ -24,56 +25,104 @@ function checkGetAddressParams(address){
 
 }
 
+/**
+ * Return clean html and part of headers response from url
+ * @param  {String} pageExecutorRequest - address http://website.com
+ * @return {Object} promise resolve when cache find or pageExecutor send result
+ */
+function getPureHtml(pageExecutorRequest){
+
+  return new Promise( (resolve, reject) => {
+
+    if(config.frontEnd.cache.active && cacheApi.has(pageExecutorRequest) ){
+
+      console.log(`Api use cache for address ${pageExecutorRequest}`);
+      
+      const pureHtml = cacheApi.get(pageExecutorRequest);
+      const headers = {
+        'Content-length': pureHtml.length,
+        'lower-up-caching': 'true'
+      };
+
+      return resolve({ pureHtml, headers });
+
+    }
+    request.get(pageExecutorRequest, (err, resPageExecutor, pureHtml) => {
+
+      if(err || resPageExecutor.statusCode !== 200){
+        
+        if(!err){
+          
+          err = new Error(`Error PageExecutor: code: ${resPageExecutor.statusCode}, body: ${pureHtml}`);
+        }
+        
+        return reject(`code: ${err.code}, error: ${err}`);
+
+      }
+      
+      if(config.frontEnd.cache.active){
+        
+        console.log(`Api caching address ${pageExecutorRequest}`);
+        cacheApi.set(pageExecutorRequest, pureHtml);
+        
+      }
+
+      const headers = {
+        'Content-length': pureHtml.length,
+        'lower-up-caching': 'false'
+      };
+      
+      return resolve({ pureHtml, headers });
+      
+    });
+
+  });
+
+}
 
 /**
  *  Call pageExecutor service
  *  @param {Object} req - request client
  *  @param {Object} res - response client
  *  @param {Function} next - callback for next middleware
+ *  @return {undefined} next - when next is call or response send
  */
 function getWebsite(req, res, next){
 
-  if(req.url.pathname === '/get'){
+  if(req.url.pathname !== '/get'){
 
-    if(checkGetAddressParams(req.url.query.address) ){
-
-      console.log(`Api process for address ${req.url.query.address}`);
-
-      const pageExectutorRequest = `${config.PageExecutor.address}:${config.PageExecutor.port}/get?address=${req.url.query.address}`;
-
-      request.get(pageExectutorRequest, (err, resPageExecutor, pureHtml) => {
-
-        if(err){
-
-          console.error(err);
-          res.writeHead(500);
-
-          return res.end(err.toString() );
-
-        }
-
-        res.writeHead(200, {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'text/html; charset=UTF-8',
-          'Content-length': pureHtml.length
-        });
-
-        return res.end(pureHtml);
-
-      });
-
-    } else{
-
-      res.writeHead(401);
-      res.end('Address url incorrect');
-
-    }
-
-  } else{
-
-    next();
+    return next();
 
   }
+
+  if(!checkGetAddressParams(req.url.query.address) ){
+
+    res.writeHead(400);
+    return res.end('Address url incorrect');
+
+  }
+
+  const pageExecutorRequest = `${config.PageExecutor.address}:${config.PageExecutor.port}/get?address=${req.url.query.address}`;
+  const startTimePageExecutor = Date.now();
+
+  getPureHtml(pageExecutorRequest).then( (data) => {
+
+    const timePageExecutor = Date.now() - startTimePageExecutor;
+
+    console.log(`Api process for address ${req.url.query.address}
+       Time: ${timePageExecutor}ms
+      `);
+
+    const headers = Object.assign({}, {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'text/html; charset=UTF-8'
+    }, data.headers);
+
+    res.writeHead(200, headers);
+
+    return res.end(data.pureHtml);
+
+  }, next);
 
 }
 
