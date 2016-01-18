@@ -3,27 +3,7 @@
 const jsdom = require('jsdom');
 const Promise = require('bluebird');
 
-
-/**
- * Represents a book.
- * @param {Array} tagsNames - Array of Name tag to remove
- * @param {Object} window - Current document window
- */
-function removeAllElementsByTagsNames(tagsNames, window){
-
-  for(const tagName of tagsNames){
-
-    const tags = window.document.getElementsByTagName(tagName);
-
-    for(let i = 0; i < tags.length; i++){
-
-      tags[i].parentNode.removeChild(tags[i]);
-
-    }
-
-  }
-
-}
+const pageCleaner = require('./pageCleaner');
 
 module. exports = (address) => {
 
@@ -44,10 +24,7 @@ module. exports = (address) => {
         }
 
         // let originaleTime = new Date( (Date.now() - window.times));
-
-        removeAllElementsByTagsNames(['script', 'noscript', 'img', 'svg', 'iframe'], window);
-
-        const content = window.document.body.innerHTML;
+        const content = pageCleaner(window);
 
         window.close();
         return resolve(content);
