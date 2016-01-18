@@ -47,17 +47,20 @@ function getPureHtml(pageExecutorRequest){
       return resolve({ pureHtml, headers });
 
     }
+
     request.get(pageExecutorRequest, (err, resPageExecutor, pureHtml) => {
 
-      if(err || resPageExecutor.statusCode !== 200){
-        
-        if(!err){
-          
-          err = new Error(`Error PageExecutor: code: ${resPageExecutor.statusCode}, body: ${pureHtml}`);
+      if(err){
 
-        }
-        
         return reject(`code: ${err.code}, error: ${err}`);
+
+      }
+
+      if(resPageExecutor.statusCode !== 200){
+
+        const errPageExecutor = new Error(`Error PageExecutor: code: ${resPageExecutor.statusCode}, body: ${pureHtml}`);
+
+        return reject(`code: errPageExecutor, error: ${errPageExecutor}`);
 
       }
       
