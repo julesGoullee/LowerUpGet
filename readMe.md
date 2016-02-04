@@ -2,6 +2,10 @@ lower Up Get
 ==========
 load page and render server side with NodeJs. You get page rendered via one simple request for simple response: only text. 
 
+[![Build Status](https://travis-ci.org/julesGoullee/LowerUpGet.png)](https://travis-ci.org/julesGoullee/LowerUpGet)
+[![dependencies Status](https://david-dm.org/julesGoullee/LowerUpGet.svg)](https://david-dm.org/julesGoullee/LowerUpGet#info=dependencies&view=table)
+[![dev dependencies Status](https://david-dm.org/julesGoullee/LowerUpGet/dev-status.svg)](https://david-dm.org/julesGoullee/LowerUpGet#info=devDependencies&view=table)
+
 Launch app on your phone:
 ![Schema](https://raw.githubusercontent.com/julesGoullee/LowerUpGet/master/schema.png)
 
