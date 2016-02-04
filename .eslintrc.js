@@ -38,7 +38,7 @@ module.exports = {
     'jquery': false,                              // jquery global variables.
     'commonjs': false,                            // CommonJS global variables and CommonJS scoping
     'amd': false,                                 // defines require() and define() as global variables as per the amd spec.
-    'mocha': false,                               // adds all of the Mocha testing global variables.
+    'mocha': true,                               // adds all of the Mocha testing global variables.
     'worker': false,                              // Web workers global variables.
     'jasmine': false,                             // adds all of the Jasmine testing global variables for version 1.3 and 2.0.
     'phantomjs': false,                           // phantomjs global variables.
@@ -48,7 +48,9 @@ module.exports = {
     'shelljs': false                              // shelljs global variables.
   },
 
-  'globals': {},
+  'globals': {
+    'expect' : true
+  },
 
   'plugins': [],
 

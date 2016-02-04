@@ -1,0 +1,2624 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>GitHub - tmpvar/jsdom: A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="tmpvar/jsdom" name="twitter:title" /><meta content="jsdom - A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/46673?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/46673?v=3&amp;s=400" property="og:image" /><meta content="tmpvar/jsdom" property="og:title" /><meta content="https://github.com/tmpvar/jsdom" property="og:url" /><meta content="jsdom - A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="B91675EF:10EB:73CE43F:569CFD72" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location" />
+<meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event" />
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="518d7666283901d2d18fa7515e770b8375fb865d" name="form-nonce" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-1b53a0bcb9add868a6c5ae469ecabb8b236ffa8f2b05360fde027f75eb714f1b.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-70af51f1bed4904749e6ef486ad11871c8ce4361ac82bb5f96a090b7f5346580.css" media="all" rel="stylesheet" />
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="4222bfcb881548243f94e18e8a3bcfd0">
+
+      
+  <meta name="description" content="jsdom - A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js">
+  <meta name="go-import" content="github.com/tmpvar/jsdom git https://github.com/tmpvar/jsdom.git">
+
+  <meta content="46673" name="octolytics-dimension-user_id" /><meta content="tmpvar" name="octolytics-dimension-user_login" /><meta content="478584" name="octolytics-dimension-repository_id" /><meta content="tmpvar/jsdom" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="478584" name="octolytics-dimension-repository_network_root_id" /><meta content="tmpvar/jsdom" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/tmpvar/jsdom/commits/master.atom" rel="alternate" title="Recent Commits to jsdom:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out   env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      
+      <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span aria-hidden="true" class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="btn" href="/login?return_to=%2Ftmpvar%2Fjsdom" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/tmpvar/jsdom/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/tmpvar/jsdom/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      aria-label="Search this repository"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/pricing" data-ga-click="(Logged out) Header, go to pricing, text:pricing">Pricing</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-repo-pjax-container" class="context-loader-container js-repo-nav-next" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Ftmpvar%2Fjsdom"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span aria-hidden="true" class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="/tmpvar/jsdom/watchers">
+    175
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Ftmpvar%2Fjsdom"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span aria-hidden="true" class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/tmpvar/jsdom/stargazers">
+      5,245
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Ftmpvar%2Fjsdom"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span aria-hidden="true" class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+
+    <a href="/tmpvar/jsdom/network" class="social-count">
+      587
+    </a>
+  </li>
+</ul>
+
+    <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span aria-hidden="true" class="octicon octicon-repo"></span>
+  <span class="author"><a href="/tmpvar" class="url fn" itemprop="url" rel="author"><span itemprop="title">tmpvar</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/tmpvar/jsdom" data-pjax="#js-repo-pjax-container">jsdom</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+  </span>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <a href="/tmpvar/jsdom" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /tmpvar/jsdom">
+    <span aria-hidden="true" class="octicon octicon-code"></span>
+    Code
+</a>
+    <a href="/tmpvar/jsdom/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /tmpvar/jsdom/issues">
+      <span aria-hidden="true" class="octicon octicon-issue-opened"></span>
+      Issues
+      <span class="counter">117</span>
+</a>
+  <a href="/tmpvar/jsdom/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /tmpvar/jsdom/pulls">
+    <span aria-hidden="true" class="octicon octicon-git-pull-request"></span>
+    Pull requests
+    <span class="counter">2</span>
+</a>
+    <a href="/tmpvar/jsdom/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /tmpvar/jsdom/wiki">
+      <span aria-hidden="true" class="octicon octicon-book"></span>
+      Wiki
+</a>
+  <a href="/tmpvar/jsdom/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /tmpvar/jsdom/pulse">
+    <span aria-hidden="true" class="octicon octicon-pulse"></span>
+    Pulse
+</a>
+  <a href="/tmpvar/jsdom/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /tmpvar/jsdom/graphs">
+    <span aria-hidden="true" class="octicon octicon-graph"></span>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+<div class="repository-meta js-details-container">
+  <span class="repository-meta-content">
+        A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js
+  </span>
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/tmpvar/jsdom/commits/master">
+            <span aria-hidden="true" class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              2,528
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/tmpvar/jsdom/branches">
+          <span aria-hidden="true" class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            10
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/tmpvar/jsdom/releases">
+          <span aria-hidden="true" class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            168
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/tmpvar/jsdom/graphs/contributors">
+    <span aria-hidden="true" class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      163
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/tmpvar/jsdom/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">85.2%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/tmpvar/jsdom/search?l=html">
+                <span class="color-block language-color" style="background-color:#e44b23;"></span>
+                <span class="lang">HTML</span>
+                <span class="percent">8.5%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/tmpvar/jsdom/search?l=groff">
+                <span class="color-block language-color" style="background-color:#ccc;"></span>
+                <span class="lang">Groff</span>
+                <span class="percent">6.3%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="JavaScript 85.2%" style="width:85.2%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+    <span class="language-color" aria-label="HTML 8.5%" style="width:8.5%; background-color:#e44b23;" itemprop="keywords">HTML</span>
+    <span class="language-color" aria-label="Groff 6.3%" style="width:6.3%; background-color:#ccc;" itemprop="keywords">Groff</span>
+  </div>
+
+<include-fragment src="/tmpvar/jsdom/show_partial?partial=tree%2Frecently_touched_branches_list"></include-fragment>
+
+<div class="file-navigation in-mid-page file-navigation-new">
+  <div class="right">
+    <div class="btn-group">
+      
+  <button class="btn btn-sm disabled tooltipped tooltipped-n" aria-label="You must be signed in to make or propose changes" type="button">
+    New file
+  </button>
+
+
+
+      <a href="/tmpvar/jsdom/find/master"
+        class="btn btn-sm empty-icon right js-show-file-finder"
+        data-pjax
+        data-hotkey="t"
+        data-ga-click="Repository, find file, location:repo overview">
+        Find file
+      </a>
+    </div>
+      <div class="file-navigation-options" data-multiple>
+
+        <div class="file-navigation-option">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol" class="js-set-user-protocol-preference" data-form-nonce="518d7666283901d2d18fa7515e770b8375fb865d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ygvr1k0S+LlEi4CphM21QqMjIrYEacARjxUEPKSVkjnkpJrrbauEXbPB2eZboYEt+HOI6VPtNtFswqHf6hZCjQ==" /></div>
+            <input type="hidden" name="protocol_type" value="clone">
+
+            <div class="select-menu js-menu-container js-select-menu">
+              <div class="input-group js-select-button js-zeroclipboard-container">
+                <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview">
+    HTTPS
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="https://github.com/tmpvar/jsdom.git" readonly>
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span aria-hidden="true" class="octicon octicon-clippy"></span></button>
+</div>
+
+              </div>
+
+              <div class="select-menu-modal-holder">
+                <div class="select-menu-modal js-menu-content" aria-hidden="true">
+                  <div class="select-menu-header">
+                    <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+                    <span class="select-menu-title">Choose a clone URL</span>
+                  </div>
+
+                  <div class="select-menu-list js-navigation-container" role="menu">
+                      <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                        <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+                        <div class="select-menu-item-text">
+                          <input type="radio" name="protocol_selector" value="http" checked>
+                          <span class="select-menu-item-heading">
+                            HTTPS
+                            (recommended)
+                          </span>
+                            <span class="description">
+                              Clone with Git or checkout with SVN using the repository's web address.
+                            </span>
+                          <span class="js-select-button-text hidden-select-button-text">
+                            <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview">
+    HTTPS
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="https://github.com/tmpvar/jsdom.git" readonly>
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span aria-hidden="true" class="octicon octicon-clippy"></span></button>
+</div>
+
+                          </span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="select-menu-list" role="menu">
+                    <a class="select-menu-item select-menu-action" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank">
+                      <span aria-hidden="true" class="octicon octicon-question select-menu-item-icon"></span>
+                      <div class="select-menu-item-text">
+                        Learn more about clone URLs
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+</form>        </div>
+
+        <div class="file-navigation-option">
+</div>
+
+
+        <div class="file-navigation-option">
+          <a href="/tmpvar/jsdom/archive/master.zip"
+             class="btn btn-sm"
+             rel="nofollow"
+             data-ga-click="Repository, download zip, location:repo overview">
+            Download ZIP
+          </a>
+        </div>
+      </div>
+  </div>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span aria-label="Close" class="octicon octicon-x js-menu-close" role="button"></span>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/3.x"
+               data-name="3.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.x">
+                3.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/4.x"
+               data-name="4.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.x">
+                4.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/childnode-take2"
+               data-name="childnode-take2"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="childnode-take2">
+                childnode-take2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/feature/new-parse5"
+               data-name="feature/new-parse5"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="feature/new-parse5">
+                feature/new-parse5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/level3-core"
+               data-name="level3-core"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="level3-core">
+                level3-core
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/tmpvar/jsdom/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/new-whatwg-url"
+               data-name="new-whatwg-url"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="new-whatwg-url">
+                new-whatwg-url
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/newapi"
+               data-name="newapi"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="newapi">
+                newapi
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/parse5-bkp"
+               data-name="parse5-bkp"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="parse5-bkp">
+                parse5-bkp
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/tmpvar/jsdom/tree/update/webidl2js"
+               data-name="update/webidl2js"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="update/webidl2js">
+                update/webidl2js
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/v0.2.14-patch2"
+              data-name="v0.2.14-patch2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="v0.2.14-patch2">
+                v0.2.14-patch2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/v0.2.13-patch3"
+              data-name="v0.2.13-patch3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="v0.2.13-patch3">
+                v0.2.13-patch3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/v0.2.13-patch2"
+              data-name="v0.2.13-patch2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="v0.2.13-patch2">
+                v0.2.13-patch2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/v0.1"
+              data-name="v0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="v0.1">
+                v0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/v0.0.1"
+              data-name="v0.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="v0.0.1">
+                v0.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/rm"
+              data-name="rm"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="rm">
+                rm
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/8.0.0-0"
+              data-name="8.0.0-0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="8.0.0-0">
+                8.0.0-0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.2.2"
+              data-name="7.2.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.2.2">
+                7.2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.2.1"
+              data-name="7.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.2.1">
+                7.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.2.0"
+              data-name="7.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.2.0">
+                7.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.1.1"
+              data-name="7.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.1.1">
+                7.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.1.0"
+              data-name="7.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.1.0">
+                7.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.0.2"
+              data-name="7.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.2">
+                7.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.0.1"
+              data-name="7.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.1">
+                7.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/7.0.0"
+              data-name="7.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="7.0.0">
+                7.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.5.1"
+              data-name="6.5.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.5.1">
+                6.5.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.5.0"
+              data-name="6.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.5.0">
+                6.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.4.0"
+              data-name="6.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.4.0">
+                6.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.3.0"
+              data-name="6.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.3.0">
+                6.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.2.0"
+              data-name="6.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.2.0">
+                6.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.1.0"
+              data-name="6.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.1.0">
+                6.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.0.1"
+              data-name="6.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.0.1">
+                6.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/6.0.0"
+              data-name="6.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.0.0">
+                6.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.6.1"
+              data-name="5.6.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.6.1">
+                5.6.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.6.0"
+              data-name="5.6.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.6.0">
+                5.6.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.5.0"
+              data-name="5.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.5.0">
+                5.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.4.3"
+              data-name="5.4.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.4.3">
+                5.4.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.4.2"
+              data-name="5.4.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.4.2">
+                5.4.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.4.1"
+              data-name="5.4.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.4.1">
+                5.4.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.4.0"
+              data-name="5.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.4.0">
+                5.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.3.0"
+              data-name="5.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.3.0">
+                5.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.2.0"
+              data-name="5.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.2.0">
+                5.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.1.0"
+              data-name="5.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.1.0">
+                5.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.0.1"
+              data-name="5.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.0.1">
+                5.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/5.0.0"
+              data-name="5.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.0.0">
+                5.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.5.2"
+              data-name="4.5.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.5.2">
+                4.5.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.5.1"
+              data-name="4.5.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.5.1">
+                4.5.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.5.0"
+              data-name="4.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.5.0">
+                4.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.4.0"
+              data-name="4.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.4.0">
+                4.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.3.0"
+              data-name="4.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.3.0">
+                4.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.2.0"
+              data-name="4.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.2.0">
+                4.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.1.0"
+              data-name="4.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.1.0">
+                4.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.0.5"
+              data-name="4.0.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0.5">
+                4.0.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.0.4"
+              data-name="4.0.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0.4">
+                4.0.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.0.3"
+              data-name="4.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0.3">
+                4.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.0.2"
+              data-name="4.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0.2">
+                4.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.0.1"
+              data-name="4.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0.1">
+                4.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/4.0.0"
+              data-name="4.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="4.0.0">
+                4.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.1.2"
+              data-name="3.1.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.1.2">
+                3.1.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.1.1"
+              data-name="3.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.1.1">
+                3.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.1.0"
+              data-name="3.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.1.0">
+                3.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.0.3"
+              data-name="3.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.0.3">
+                3.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.0.2"
+              data-name="3.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.0.2">
+                3.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.0.1"
+              data-name="3.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.0.1">
+                3.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/3.0.0"
+              data-name="3.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="3.0.0">
+                3.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/2.0.0"
+              data-name="2.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="2.0.0">
+                2.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.5.0"
+              data-name="1.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.5.0">
+                1.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.4.1"
+              data-name="1.4.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.4.1">
+                1.4.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.4.0"
+              data-name="1.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.4.0">
+                1.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.3.2"
+              data-name="1.3.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.2">
+                1.3.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.3.1"
+              data-name="1.3.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.1">
+                1.3.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.3.0"
+              data-name="1.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.0">
+                1.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.2.3"
+              data-name="1.2.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.3">
+                1.2.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.2.2"
+              data-name="1.2.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.2">
+                1.2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.2.1"
+              data-name="1.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.1">
+                1.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.2.0"
+              data-name="1.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.0">
+                1.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.1.0"
+              data-name="1.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.1.0">
+                1.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.3"
+              data-name="1.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.3">
+                1.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.2"
+              data-name="1.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.2">
+                1.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.1"
+              data-name="1.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.1">
+                1.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0"
+              data-name="1.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0">
+                1.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.7"
+              data-name="1.0.0-pre.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.7">
+                1.0.0-pre.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.6"
+              data-name="1.0.0-pre.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.6">
+                1.0.0-pre.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.5"
+              data-name="1.0.0-pre.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.5">
+                1.0.0-pre.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.4"
+              data-name="1.0.0-pre.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.4">
+                1.0.0-pre.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.3"
+              data-name="1.0.0-pre.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.3">
+                1.0.0-pre.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.2"
+              data-name="1.0.0-pre.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.2">
+                1.0.0-pre.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/1.0.0-pre.1"
+              data-name="1.0.0-pre.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre.1">
+                1.0.0-pre.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.11.1"
+              data-name="0.11.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.11.1">
+                0.11.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.11.0"
+              data-name="0.11.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.11.0">
+                0.11.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.6"
+              data-name="0.10.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.6">
+                0.10.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.5"
+              data-name="0.10.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.5">
+                0.10.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.4"
+              data-name="0.10.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.4">
+                0.10.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.3"
+              data-name="0.10.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.3">
+                0.10.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.2"
+              data-name="0.10.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.2">
+                0.10.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.1"
+              data-name="0.10.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.1">
+                0.10.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.10.0"
+              data-name="0.10.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.0">
+                0.10.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.9.0"
+              data-name="0.9.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.9.0">
+                0.9.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.11"
+              data-name="0.8.11"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.11">
+                0.8.11
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.10"
+              data-name="0.8.10"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.10">
+                0.8.10
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.9"
+              data-name="0.8.9"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.9">
+                0.8.9
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.8"
+              data-name="0.8.8"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.8">
+                0.8.8
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.7"
+              data-name="0.8.7"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.7">
+                0.8.7
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.6"
+              data-name="0.8.6"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.6">
+                0.8.6
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.5"
+              data-name="0.8.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.5">
+                0.8.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.4"
+              data-name="0.8.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.4">
+                0.8.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.3"
+              data-name="0.8.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.3">
+                0.8.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.2"
+              data-name="0.8.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.2">
+                0.8.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.1"
+              data-name="0.8.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.1">
+                0.8.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/tmpvar/jsdom/tree/0.8.0"
+              data-name="0.8.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <span aria-hidden="true" class="octicon octicon-check select-menu-item-icon"></span>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.0">
+                0.8.0
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <a href="/tmpvar/jsdom/pull/new/master" class="btn btn-sm btn-primary" data-pjax data-ga-click="Repository, new pull request, location:repo overview">
+      New pull request
+    </a>
+
+  <div class="breadcrumb">
+    
+  </div>
+</div>
+
+
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/tmpvar/jsdom/commit/ac321fc52adb15a938c071afc5bca86e49b1584f" data-pjax>
+        ac321fc
+      </a>
+      <time datetime="2016-01-14T20:30:13Z" is="relative-time">Jan 14, 2016</time>
+    </span>
+
+
+    <span class="commit-author-section">
+      <img alt="@kasperisager" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/1174718?v=3&amp;s=40" width="20" />
+      <a href="/kasperisager" class="user-mention" rel="contributor">kasperisager</a>
+        committed with <a href="/domenic" class="user-mention" rel="contributor">domenic</a>
+    </span>
+
+        <a href="/tmpvar/jsdom/commit/ac321fc52adb15a938c071afc5bca86e49b1584f" class="message" data-pjax="true" title="Implement element.insertAdjacentHTML()
+
+Fixes #1219.">Implement element.insertAdjacentHTML()</a>
+          <span class="hidden-text-expander inline">
+            <a href="#" class="js-details-target">…</a>
+          </span>
+    </span>
+
+      <div class="commit-desc"><pre class="text-small">Fixes <a href="https://github.com/tmpvar/jsdom/issues/1219" class="issue-link js-issue-link" data-url="https://github.com/tmpvar/jsdom/issues/1219" data-id="103670773" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#1219</a>.</pre></div>
+  </div>
+
+
+<div class="file-wrap ">
+
+  <a href="/tmpvar/jsdom/tree/ac321fc52adb15a938c071afc5bca86e49b1584f" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span aria-hidden="true" class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/tree/master/benchmark" class="js-directory-link js-navigation-open" id="07978586e47c8709a63e895fbf3c3c7d-c4fd7c0e58cb502c76151865e09234c6b3bf2dcd" title="benchmark">benchmark</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/b2e3a494b0e6a75b1caea32a17f41fc7d4799321" class="message" data-pjax="true" title="Remove xtend dependency in favor of Object.assign">Remove xtend dependency in favor of Object.assign</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-26T22:50:35Z" is="time-ago">Sep 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/tree/master/lib" class="js-directory-link js-navigation-open" id="e8acc63b1e238f3255c900eed37254b8-5857c6aba7bc31954e70a23d2c528bba78f77319" title="lib">lib</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/ac321fc52adb15a938c071afc5bca86e49b1584f" class="message" data-pjax="true" title="Implement element.insertAdjacentHTML()
+
+Fixes #1219.">Implement element.insertAdjacentHTML()</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-17T03:12:06Z" is="time-ago">Jan 16, 2016</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/tree/master/scripts/webidl" class="js-directory-link js-navigation-open" id="4d7a1b66af07b0c07ad8b55f601ff5e1-1bed6763f6c69738f52efd4f36f17b1c9e76c63a" title="This path skips through empty directories"><span class="simplified-path">scripts/</span>webidl</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/24c6f9f56b3e8f8831950cbef71130a3ba95a4dc" class="message" data-pjax="true" title="Derive everything in the Node hierarchy from IDL
+
+This moves everything in the Node hierarchy, including all elements and the Document type, to being generated from the spec&#39;s IDL using webidl2js. This greatly improves spec-compliance in e.g. argument conversion and the like, and hides almost all implementation details behind the wrapper/impl class split. It also implements the global event handlers.
+
+There is still some follow-up work to do in commenting out the parts of the spec-IDL which we do not implement yet.">Derive everything in the Node hierarchy from IDL</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-04T04:02:07Z" is="time-ago">Jan 4, 2016</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/tree/master/test" class="js-directory-link js-navigation-open" id="098f6bcd4621d373cade4e832627b4f6-d8e6bf3e85ad1e30ced7d568518651fd8e7e7b5d" title="test">test</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/ac321fc52adb15a938c071afc5bca86e49b1584f" class="message" data-pjax="true" title="Implement element.insertAdjacentHTML()
+
+Fixes #1219.">Implement element.insertAdjacentHTML()</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-17T03:12:06Z" is="time-ago">Jan 17, 2016</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.editorconfig" class="js-directory-link js-navigation-open" id="1e70daafb475c0ce3fef7d2728279182-4960585ebbf067a2e5c6ef1af1420ba5ba26aa74" title=".editorconfig">.editorconfig</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/0188a47fbadef2916fcceb689cc077d6568fb683" class="message" data-pjax="true" title="Add JSCS and fix everything it finds
+
+Will have to manually sync the ignore list with .jshintignore...">Add JSCS and fix everything it finds</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-04-15T05:22:52Z" is="time-ago">Apr 15, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.eslintignore" class="js-directory-link js-navigation-open" id="1b0fd5322de42e11c8786543f74c7c41-d1cc24bf73ca4a1439e210b9f4b1071e71e6f109" title=".eslintignore">.eslintignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/1dda9dcdc7e8b8afc148301621441fb673ae0417" class="message" data-pjax="true" title="Clean up stub level files by moving them into living/index.js
+
+This also removes a few stub and not-actually-in-browsers classes that were in level3/core.js, which we just delete.">Clean up stub level files by moving them into living/index.js</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-05T04:48:41Z" is="time-ago">Jan 4, 2016</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.eslintrc" class="js-directory-link js-navigation-open" id="1dc6ee56b778cd91e0327b52aaeaa1b9-c337366b2c2dcaec5deba2074f09bb1868a30434" title=".eslintrc">.eslintrc</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/eca4167b171709b085e0d81962963f30ed165133" class="message" data-pjax="true" title="Switch from JSHint to ESLint and enforce a bunch of new rules">Switch from JSHint to ESLint and enforce a bunch of new rules</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-26T22:11:49Z" is="time-ago">Sep 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.gitattributes" class="js-directory-link js-navigation-open" id="fc723d30b02a4cca7a534518111c1a66-dd0cbbb069cfa7c60dd17b944f6d62548a688db0" title=".gitattributes">.gitattributes</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/6c5fe5be8cd01e0b4e91fa96d025341aff1db291" class="message" data-pjax="true" title="Fix test failures due to wrong line endings on windows
+
+If autocrlf was set, test would fail because they check text to be equal, which is not the case with modified line endings.">Fix test failures due to wrong line endings on windows</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-02-15T20:02:24Z" is="time-ago">Feb 15, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.gitignore" class="js-directory-link js-navigation-open" id="a084b794bc0759e7a6b77810e01874f2-9082cea9e2defcdb27c0b959c5e507c01a8f3170" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/2eac87eec2cceccdfdaf993af4a28788a5179f1f" class="message" data-pjax="true" title="Make webidl conversions work with multiple categories
+
+Since all generated js files are so interdependent on each other, splitting them into folders according to their category screws up all relative paths between each other.
+
+Instead, we&#39;ll put all generated js files into a single folder and split .idl and -impl files according to their category, which works fine.">Make webidl conversions work with multiple categories</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-19T13:20:49Z" is="time-ago">Nov 19, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.gitmodules" class="js-directory-link js-navigation-open" id="8903239df476d7401cf9e76af0252622-4bae31b135b81ad588faddf1dfeef23494cdff05" title=".gitmodules">.gitmodules</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/c2d1525784290313067acce4237dac8926363d40" class="message" data-pjax="true" title="Change web platform test structure a bit
+
+- Move w3c/domparsing to misc/domparsing; the intent was never to segregate specs by standards organization
+- Rename w3c/ to web-platform-tests/ for accuracy
+- Update web-platform-tests/index.js to be a bit DRYer, which should hopefully ease updating
+- Update to latest web-platform-tests revision">Change web platform test structure a bit</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-27T09:10:36Z" is="time-ago">Sep 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.jscsrc" class="js-directory-link js-navigation-open" id="e5b8cacefa8c329daed4f4b628f72e61-d70f94f2976171be9679d7fd29ec5e2f9665f580" title=".jscsrc">.jscsrc</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/1dda9dcdc7e8b8afc148301621441fb673ae0417" class="message" data-pjax="true" title="Clean up stub level files by moving them into living/index.js
+
+This also removes a few stub and not-actually-in-browsers classes that were in level3/core.js, which we just delete.">Clean up stub level files by moving them into living/index.js</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-05T04:48:41Z" is="time-ago">Jan 5, 2016</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.mailmap" class="js-directory-link js-navigation-open" id="c9d540715cff3469b65ddd01f614848b-b14a6ce65a1d3c891a87b6eac325d707e5c77e97" title=".mailmap">.mailmap</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/d7b2f7b91e7aa64c072db7a8c3bbd16f9d1d2095" class="message" data-pjax="true" title="Version 7.2.2">Version 7.2.2</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-27T00:27:03Z" is="time-ago">Dec 26, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.npmignore" class="js-directory-link js-navigation-open" id="0fd4ef892d9d4990033701887c2f9bcc-112fc2c1119ae16adc5829a1aa62e26982da3dac" title=".npmignore">.npmignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/6638523a10146360ebfcdeffdd416fd7b956b691" class="message" data-pjax="true" title="Add scripts to automatically generate IDL wrapper classes">Add scripts to automatically generate IDL wrapper classes</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-19T22:00:05Z" is="time-ago">Sep 19, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/.travis.yml" class="js-directory-link js-navigation-open" id="354f30a63fb0907d4ad57269548329e3-312f62113782566d1837ed9a3e700297c26a3733" title=".travis.yml">.travis.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/e55582cc7f2d9569a7184876bcc0d2876d1c3897" class="message" data-pjax="true" title="Fix #1329: canvas tests Travis config
+
+Not very DRY, but for now we'll live.">Fix</a> <a href="https://github.com/tmpvar/jsdom/issues/1329" class="issue-link js-issue-link" data-url="https://github.com/tmpvar/jsdom/issues/1329" data-id="123954977" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#1329</a><a href="/tmpvar/jsdom/commit/e55582cc7f2d9569a7184876bcc0d2876d1c3897" class="message" data-pjax="true" title="Fix #1329: canvas tests Travis config
+
+Not very DRY, but for now we'll live.">: canvas tests Travis config</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-04T16:24:17Z" is="time-ago">Jan 4, 2016</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/AUTHORS.txt" class="js-directory-link js-navigation-open" id="81cc714230c9d42f9427ca91ac4d0921-d03ea423e45521c75638a6de904c573fe1577c12" title="AUTHORS.txt">AUTHORS.txt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/d7b2f7b91e7aa64c072db7a8c3bbd16f9d1d2095" class="message" data-pjax="true" title="Version 7.2.2">Version 7.2.2</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-27T00:27:03Z" is="time-ago">Dec 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/Changelog.md" class="js-directory-link js-navigation-open" id="9b8fab691c00b9e5380b19ce882f3271-8dd8ff72eed25646231203d1b4b7b5b6d0e9a818" title="Changelog.md">Changelog.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/d7b2f7b91e7aa64c072db7a8c3bbd16f9d1d2095" class="message" data-pjax="true" title="Version 7.2.2">Version 7.2.2</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-27T00:27:03Z" is="time-ago">Dec 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/Contributing.md" class="js-directory-link js-navigation-open" id="f0e09ea60b1f1cc6a00329faaa3f7193-c813728df253266bd3074099f89d827708e4980c" title="Contributing.md">Contributing.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/9022c42d0748e60f5a8145cf213186cce45fffc3" class="message" data-pjax="true" title="Allow un-upstreamed web platform tests
+
+This adds a new directory, to-upstream, which has a parallel hierarchy to the web platform test suite. All test files in it will be run.
+
+It demonstrates this process by porting some tests from our attributes tests.">Allow un-upstreamed web platform tests</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-02T23:44:33Z" is="time-ago">Oct 2, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/LICENSE.txt" class="js-directory-link js-navigation-open" id="61e0bdf7e1b43c5c93d9488b22e04170-0dbd4290419fcfd490e0dd574d22ba2660f7fc5d" title="LICENSE.txt">LICENSE.txt</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/68c8bbd59567a7913f2c3e95ae7a78348885277f" class="message" data-pjax="true" title="added a compatibility layer for original w3 tests (attempt at lowering the barrier to entry)">added a compatibility layer for original w3 tests (attempt at lowerin…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-01-20T06:28:13Z" is="time-ago">Jan 20, 2010</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/README.md" class="js-directory-link js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-962c4383f6101409dfc59f77b48249b8488e0b0f" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/93b86435d521168c44bab626564953f7623be807" class="message" data-pjax="true" title="Make it clear jQuery path in example is an example
+
+Fixes #1313.">Make it clear jQuery path in example is an example</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-12-06T20:27:41Z" is="time-ago">Dec 6, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span aria-hidden="true" class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/tmpvar/jsdom/blob/master/package.json" class="js-directory-link js-navigation-open" id="b9cfc7f2cdf78a7f4b91a753d10865a2-4174f6d3f633bdeca299f3391a02e9d0e81cead5" title="package.json">package.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/tmpvar/jsdom/commit/6d54df2404192257dfa9a4993621d93a226ebc80" class="message" data-pjax="true" title="Comment out unimplemented IDL, plus minor fixes">Comment out unimplemented IDL, plus minor fixes</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2016-01-07T01:29:54Z" is="time-ago">Jan 6, 2016</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+  <div id="readme" class="boxed-group clearfix announce instapaper_body md">
+    <h3>
+      <span aria-hidden="true" class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+      <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-jsdom" class="anchor" href="#jsdom" aria-hidden="true"><span class="octicon octicon-link"></span></a>jsdom</h1>
+
+<p>A JavaScript implementation of the WHATWG DOM and HTML standards, for use with <a href="https://nodejs.org/">Node.js</a>.</p>
+
+<h2><a id="user-content-install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install jsdom</pre></div>
+
+<p>Note that as of our 7.0.0 release, jsdom requires Node.js 4 or newer (<a href="https://github.com/tmpvar/jsdom/blob/master/Changelog.md#700">why?</a>). In the meantime you are still welcome to install a release in <a href="https://github.com/tmpvar/jsdom/tree/3.x">the 3.x series</a> if you use legacy Node.js versions like 0.10 or 0.12. There are also various releases between 3.x and 7.0.0 that work with various io.js versions.</p>
+
+<h2><a id="user-content-human-contact" class="anchor" href="#human-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Human contact</h2>
+
+<ul>
+<li><a href="http://groups.google.com/group/jsdom">Mailing list</a></li>
+<li>IRC channel: #jsdom on freenode</li>
+</ul>
+
+<h2><a id="user-content-easymode-jsdomenv" class="anchor" href="#easymode-jsdomenv" aria-hidden="true"><span class="octicon octicon-link"></span></a>Easymode: <code>jsdom.env</code></h2>
+
+<p><code>jsdom.env</code> is an API that allows you to throw a bunch of stuff at it, and it will generally do the right thing.</p>
+
+<p>You can use it with a URL</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Count all of the links from the io.js build page</span>
+<span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>(
+  <span class="pl-s"><span class="pl-pds">"</span>https://iojs.org/dist/<span class="pl-pds">"</span></span>,
+  [<span class="pl-s"><span class="pl-pds">"</span>http://code.jquery.com/jquery.js<span class="pl-pds">"</span></span>],
+  <span class="pl-k">function</span> (<span class="pl-smi">err</span>, <span class="pl-smi">window</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>there have been<span class="pl-pds">"</span></span>, <span class="pl-smi">window</span>.<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>).<span class="pl-c1">length</span> <span class="pl-k">-</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>io.js releases!<span class="pl-pds">"</span></span>);
+  }
+);</pre></div>
+
+<p>or with raw HTML</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Run some jQuery on a html fragment</span>
+<span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>(
+  <span class="pl-s"><span class="pl-pds">'</span>&lt;p&gt;&lt;a class="the-link" href="https://github.com/tmpvar/jsdom"&gt;jsdom!&lt;/a&gt;&lt;/p&gt;<span class="pl-pds">'</span></span>,
+  [<span class="pl-s"><span class="pl-pds">"</span>http://code.jquery.com/jquery.js<span class="pl-pds">"</span></span>],
+  <span class="pl-k">function</span> (<span class="pl-smi">err</span>, <span class="pl-smi">window</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>contents of a.the-link:<span class="pl-pds">"</span></span>, <span class="pl-smi">window</span>.<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>a.the-link<span class="pl-pds">"</span></span>).<span class="pl-c1">text</span>());
+  }
+);</pre></div>
+
+<p>or with a configuration object</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Print all of the news items on Hacker News</span>
+<span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>({
+  url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://news.ycombinator.com/<span class="pl-pds">"</span></span>,
+  scripts<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>http://code.jquery.com/jquery.js<span class="pl-pds">"</span></span>],
+  <span class="pl-en">done</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">err</span>, <span class="pl-smi">window</span>) {
+    <span class="pl-k">var</span> $ <span class="pl-k">=</span> <span class="pl-smi">window</span>.<span class="pl-smi">$</span>;
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>HN Links<span class="pl-pds">"</span></span>);
+    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>td.title:not(:last) a<span class="pl-pds">"</span></span>).<span class="pl-en">each</span>(<span class="pl-k">function</span>() {
+      <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span> -<span class="pl-pds">"</span></span>, <span class="pl-en">$</span>(<span class="pl-v">this</span>).<span class="pl-c1">text</span>());
+    });
+  }
+});</pre></div>
+
+<p>or with raw JavaScript source</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Print all of the news items on Hacker News</span>
+<span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> fs <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>fs<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> jquery <span class="pl-k">=</span> <span class="pl-smi">fs</span>.<span class="pl-en">readFileSync</span>(<span class="pl-s"><span class="pl-pds">"</span>./path/to/jquery.js<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>({
+  url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://news.ycombinator.com/<span class="pl-pds">"</span></span>,
+  src<span class="pl-k">:</span> [jquery],
+  <span class="pl-en">done</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">err</span>, <span class="pl-smi">window</span>) {
+    <span class="pl-k">var</span> $ <span class="pl-k">=</span> <span class="pl-smi">window</span>.<span class="pl-smi">$</span>;
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>HN Links<span class="pl-pds">"</span></span>);
+    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>td.title:not(:last) a<span class="pl-pds">"</span></span>).<span class="pl-en">each</span>(<span class="pl-k">function</span> () {
+      <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span> -<span class="pl-pds">"</span></span>, <span class="pl-en">$</span>(<span class="pl-v">this</span>).<span class="pl-c1">text</span>());
+    });
+  }
+});</pre></div>
+
+<h3><a id="user-content-how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span class="octicon octicon-link"></span></a>How it works</h3>
+
+<p>The do-what-I-mean API is used like so:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>(string, [scripts], [config], callback);</pre></div>
+
+<ul>
+<li><code>string</code>: may be a URL, file name, or HTML fragment</li>
+<li><code>scripts</code>: a string or array of strings, containing file names or URLs that will be inserted as <code>&lt;script&gt;</code> tags</li>
+<li><code>config</code>: see below</li>
+<li><code>callback</code>: takes two arguments
+
+<ul>
+<li><code>err</code>: either <code>null</code>, if nothing goes wrong, or an error, if the window could not be created</li>
+<li><code>window</code>: a brand new <code>window</code>, if there wasn't an error</li>
+</ul></li>
+</ul>
+
+<p><em>Example:</em></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>(html, <span class="pl-k">function</span> (<span class="pl-smi">err</span>, <span class="pl-smi">window</span>) {
+  <span class="pl-c">// free memory associated with the window</span>
+  <span class="pl-smi">window</span>.<span class="pl-c1">close</span>();
+});</pre></div>
+
+<p>If you would like to specify a configuration object only:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>(config);</pre></div>
+
+<ul>
+<li><code>config.html</code>: a HTML fragment</li>
+<li><code>config.file</code>: a file which jsdom will load HTML from; the resulting window's <code>location.href</code> will be a <code>file://</code> URL.</li>
+<li><code>config.url</code>: sets the resulting window's <code>location.href</code>; if <code>config.html</code> and <code>config.file</code> are not provided, jsdom will load HTML from this URL.</li>
+<li><code>config.scripts</code>: see <code>scripts</code> above.</li>
+<li><code>config.src</code>: an array of JavaScript strings that will be evaluated against the resulting document. Similar to <code>scripts</code>, but it accepts JavaScript instead of paths/URLs.</li>
+<li><code>config.cookieJar</code>: cookie jar which will be used by document and related resource requests. Can be created by <code>jsdom.createCookieJar()</code> method. Useful to share cookie state among different documents as browsers does.</li>
+<li><code>config.parsingMode</code>: either <code>"auto"</code>, <code>"html"</code>, or <code>"xml"</code>. The default is <code>"auto"</code>, which uses HTML behavior unless <code>config.url</code> responds with an XML <code>Content-Type</code>, or <code>config.file</code> contains a filename ending in <code>.xml</code> or <code>.xhtml</code>. Setting to <code>"xml"</code> will attempt to parse the document as an XHTML document. (jsdom is <a href="https://github.com/tmpvar/jsdom/issues/885">currently only OK at doing that</a>.)</li>
+<li><code>config.referrer</code>: the new document will have this referrer.</li>
+<li><code>config.cookie</code>: manually set a cookie value, e.g. <code>'key=value; expires=Wed, Sep 21 2011 12:00:00 GMT; path=/'</code>. Accepts cookie string or array of cookie strings.</li>
+<li><code>config.headers</code>: an object giving any headers that will be used while loading the HTML from <code>config.url</code>, if applicable.</li>
+<li><code>config.userAgent</code>: the user agent string used in requests; defaults to <code>Node.js (#process.platform#; U; rv:#process.version#)</code></li>
+<li><code>config.features</code>: see Flexibility section below. <strong>Note</strong>: the default feature set for <code>jsdom.env</code> does <em>not</em> include fetching remote JavaScript and executing it. This is something that you will need to <em>carefully</em> enable yourself.</li>
+<li><code>config.resourceLoader</code>: a function that intercepts subresource requests and allows you to re-route them, modify, or outright replace them with your own content. More below.</li>
+<li><code>config.done</code>, <code>config.onload</code>, <code>config.created</code>: see below.</li>
+<li><code>config.concurrentNodeIterators</code>: the maximum amount of <code>NodeIterator</code>s that you can use at the same time. The default is <code>10</code>; setting this to a high value will hurt performance.</li>
+<li><code>config.virtualConsole</code>: a virtual console instance that can capture the window’s console output; see the "Capturing Console Output" examples.</li>
+<li><code>config.pool</code>: an object describing which agents to use for the requests; defaults to <code>{ maxSockets: 6 }</code>, see <a href="https://github.com/request/request#requestoptions-callback">request module</a> for more details.</li>
+<li><code>config.agentOptions</code>: the agent options; defaults to <code>{ keepAlive: true, keepAliveMsecs: 115000 }</code>, see <a href="https://nodejs.org/api/http.html">http api</a> for more details.</li>
+</ul>
+
+<p>Note that at least one of the callbacks (<code>done</code>, <code>onload</code>, or <code>created</code>) is required, as is one of <code>html</code>, <code>file</code>, or <code>url</code>.</p>
+
+<h3><a id="user-content-initialization-lifecycle" class="anchor" href="#initialization-lifecycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initialization lifecycle</h3>
+
+<p>If you just want to load the document and execute it, the <code>done</code> callback shown above is the simplest. If anything goes wrong while loading the document and creating the window, the problem will show up in the <code>error</code> passed as the first argument.</p>
+
+<p>However, if you want more control over or insight into the initialization lifecycle, you'll want to use the <code>created</code> and/or <code>loaded</code> callbacks:</p>
+
+<h4><a id="user-content-createderror-window" class="anchor" href="#createderror-window" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>created(error, window)</code></h4>
+
+<p>The <code>created</code> callback is called as soon as the window is created, or if that process fails. You may access all <code>window</code> properties here; however, <code>window.document</code> is not ready for use yet, as the HTML has not been parsed.</p>
+
+<p>The primary use-case for <code>created</code> is to modify the window object (e.g. add new functions on built-in prototypes) before any scripts execute.</p>
+
+<p>You can also set an event handler for <code>'load'</code> or other events on the window if you wish.</p>
+
+<p>If the <code>error</code> argument is non-<code>null</code>, it will contain whatever loading or initialization error caused the window creation to fail; in that case <code>window</code> will not be passed.</p>
+
+<h4><a id="user-content-onloadwindow" class="anchor" href="#onloadwindow" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>onload(window)</code></h4>
+
+<p>The <code>onload</code> callback is called along with the window's <code>'load'</code> event. This means it will only be called if creation succeeds without error. Note that by the time it has called, any external resources will have been downloaded, and any <code>&lt;script&gt;</code>s will have finished executing.</p>
+
+<h4><a id="user-content-doneerror-window" class="anchor" href="#doneerror-window" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>done(error, window)</code></h4>
+
+<p>Now that you know about <code>created</code> and <code>onload</code>, you can see that <code>done</code> is essentially both of them smashed together:</p>
+
+<ul>
+<li>If window creation fails, then <code>error</code> will be the creation error.</li>
+<li>Otherwise, <code>window</code> will be a fully-loaded window, with all external resources downloaded and <code>&lt;script&gt;</code>s executed.</li>
+</ul>
+
+<h4><a id="user-content-dealing-with-asynchronous-script-loading" class="anchor" href="#dealing-with-asynchronous-script-loading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dealing with asynchronous script loading</h4>
+
+<p>If you load scripts asynchronously, e.g. with a module loader like RequireJS, none of the above hooks will really give you what you want. There's nothing, either in jsdom or in browsers, to say "notify me after all asynchronous loads have completed." The solution is to use the mechanisms of the framework you are using to notify about this finishing up. E.g., with RequireJS, you could do</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// On the Node.js/io.js side:</span>
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-k">...</span>).<span class="pl-c1">defaultView</span>;
+<span class="pl-c1">window</span>.<span class="pl-en">onModulesLoaded</span> <span class="pl-k">=</span> <span class="pl-k">function</span> () {
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ready to roll!<span class="pl-pds">"</span></span>);
+};</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Inside the HTML you supply to jsdom --&gt;</span>
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1"><span class="pl-en">requirejs</span>([<span class="pl-s"><span class="pl-pds">"</span>entry-module<span class="pl-pds">"</span></span>], <span class="pl-k">function</span> () {</span>
+<span class="pl-s1">  <span class="pl-smi">window</span>.<span class="pl-en">onModulesLoaded</span>();</span>
+<span class="pl-s1">});</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>For more details, see the discussion in <a href="https://github.com/tmpvar/jsdom/issues/640">#640</a>, especially <a href="https://github.com/matthewkastor">@matthewkastor</a>'s <a href="https://github.com/tmpvar/jsdom/issues/640#issuecomment-22216965">insightful comment</a>.</p>
+
+<h4><a id="user-content-listening-for-script-errors-during-initialization" class="anchor" href="#listening-for-script-errors-during-initialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Listening for script errors during initialization</h4>
+
+<p>Although it is easy to listen for script errors after initialization, via code like</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-k">...</span>).<span class="pl-c1">defaultView</span>;
+<span class="pl-smi">window</span>.<span class="pl-en">addEventListener</span>(<span class="pl-s"><span class="pl-pds">"</span>error<span class="pl-pds">"</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">event</span>) {
+  <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">"</span>script error!!<span class="pl-pds">"</span></span>, <span class="pl-smi">event</span>.<span class="pl-smi">error</span>);
+});</pre></div>
+
+<p>it is often also desirable to listen for any script errors during initialization, or errors loading scripts passed to <code>jsdom.env</code>. To do this, use the virtual console feature, described in more detail later:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> virtualConsole <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">createVirtualConsole</span>();
+<span class="pl-smi">virtualConsole</span>.<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdomError<span class="pl-pds">"</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">error</span>) {
+  <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-smi">error</span>.<span class="pl-smi">stack</span>, <span class="pl-smi">error</span>.<span class="pl-smi">detail</span>);
+});
+
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-k">...</span>, { virtualConsole }).<span class="pl-c1">defaultView</span>;</pre></div>
+
+<p>You also get this functionality for free by default if you use <code>virtualConsole.sendTo</code>; again, see more below:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> virtualConsole <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">createVirtualConsole</span>().<span class="pl-en">sendTo</span>(<span class="pl-en">console</span>);
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-k">...</span>, { virtualConsole }).<span class="pl-c1">defaultView</span>;</pre></div>
+
+<h3><a id="user-content-on-running-scripts-and-being-safe" class="anchor" href="#on-running-scripts-and-being-safe" aria-hidden="true"><span class="octicon octicon-link"></span></a>On running scripts and being safe</h3>
+
+<p>By default, <code>jsdom.env</code> will not process and run external JavaScript, since our sandbox is not foolproof. That is, code running inside the DOM's <code>&lt;script&gt;</code>s can, if it tries hard enough, get access to the Node environment, and thus to your machine. If you want to (carefully!) enable running JavaScript, you can use <code>jsdom.jsdom</code>, <code>jsdom.jQueryify</code>, or modify the defaults passed to <code>jsdom.env</code>.</p>
+
+<h2><a id="user-content-for-the-hardcore-jsdomjsdom" class="anchor" href="#for-the-hardcore-jsdomjsdom" aria-hidden="true"><span class="octicon octicon-link"></span></a>For the hardcore: <code>jsdom.jsdom</code></h2>
+
+<p>The <code>jsdom.jsdom</code> method does fewer things automatically; it takes in only HTML source, and it does not allow you to separately supply scripts that it will inject and execute. It just gives you back a <code>document</code> object, with usable <code>document.defaultView</code>, and starts asynchronously executing any <code>&lt;script&gt;</code>s included in the HTML source. You can listen for the <code>'load'</code> event to wait until scripts are done loading and executing, just like you would in a normal HTML page.</p>
+
+<p>Usage of the API generally looks like this:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">jsdom</span>;
+<span class="pl-k">var</span> doc <span class="pl-k">=</span> <span class="pl-en">jsdom</span>(markup, options);
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">doc</span>.<span class="pl-c1">defaultView</span>;</pre></div>
+
+<ul>
+<li><p><code>markup</code> is a HTML document to be parsed. You can also pass <code>undefined</code> to get the basic document, equivalent to what a browser will give if you open up an empty <code>.html</code> file.</p></li>
+<li><p><code>options</code>: see the explanation of the <code>config</code> object above.</p></li>
+</ul>
+
+<h3><a id="user-content-flexibility" class="anchor" href="#flexibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flexibility</h3>
+
+<p>One of the goals of jsdom is to be as minimal and light as possible. This section details how someone can change the behavior of <code>Document</code>s before they are created. These features are baked into the <code>DOMImplementation</code> that every <code>Document</code> has, and may be tweaked in two ways:</p>
+
+<ol>
+<li><p>When you create a new <code>Document</code>, by overriding the configuration:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">jsdom</span>;
+<span class="pl-k">var</span> doc <span class="pl-k">=</span> <span class="pl-en">jsdom</span>(<span class="pl-s"><span class="pl-pds">"</span>&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;<span class="pl-pds">"</span></span>, {
+    features<span class="pl-k">:</span> {
+      FetchExternalResources <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>link<span class="pl-pds">"</span></span>]
+    }
+});</pre></div>
+
+<p>Do note, that this will only affect the document that is currently being created. All other documents will use the defaults specified below (see: Default Features).</p></li>
+<li><p>Before creating any documents, you can modify the defaults for all future documents:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">defaultDocumentFeatures</span> <span class="pl-k">=</span> {
+    FetchExternalResources<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>],
+    ProcessExternalResources<span class="pl-k">:</span> <span class="pl-c1">false</span>
+};</pre></div></li>
+</ol>
+
+<h4><a id="user-content-external-resources" class="anchor" href="#external-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>External Resources</h4>
+
+<p>Default features are extremely important for jsdom as they lower the configuration requirement and present developers a set of consistent default behaviors. The following sections detail the available features, their defaults, and the values that jsdom uses.</p>
+
+<p><code>FetchExternalResources</code></p>
+
+<ul>
+<li><em>Default</em>: <code>["script"]</code></li>
+<li><em>Allowed</em>: <code>["script", "frame", "iframe", "link"]</code> or <code>false</code></li>
+<li><em>Default for <code>jsdom.env</code></em>: <code>false</code></li>
+</ul>
+
+<p>Enables/disables fetching files over the file system/HTTP</p>
+
+<p><code>ProcessExternalResources</code></p>
+
+<ul>
+<li><em>Default</em>: <code>["script"]</code></li>
+<li><em>Allowed</em>: <code>["script"]</code> or <code>false</code></li>
+<li><em>Default for <code>jsdom.env</code></em>: <code>false</code></li>
+</ul>
+
+<p>Enables/disables JavaScript execution</p>
+
+<p><code>SkipExternalResources</code></p>
+
+<ul>
+<li><em>Default</em>: <code>false</code> (allow all)</li>
+<li><em>Allowed</em>: <code>/url to be skipped/</code> or <code>false</code></li>
+<li><em>Example</em>: <code>/http:\/\/example.org/js/bad\.js/</code></li>
+</ul>
+
+<p>Filters resource downloading and processing to disallow those matching the given regular expression</p>
+
+<h4><a id="user-content-custom-external-resource-loader" class="anchor" href="#custom-external-resource-loader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom External Resource Loader</h4>
+
+<p>jsdom lets you intercept subresource requests using <code>config.resourceLoader</code>. <code>config.resourceLoader</code> expects a function which is called for each subresource request with the following arguments:</p>
+
+<ul>
+<li><code>resource</code>: a vanilla JavaScript object with the following properties
+
+<ul>
+<li><code>element</code>: the element that requested the resource.</li>
+<li><code>url</code>: a parsed URL object.</li>
+<li><code>cookie</code>: the content of the HTTP cookie header (<code>key=value</code> pairs separated by semicolons).</li>
+<li><code>baseUrl</code>: the base URL used to resolve relative URLs.</li>
+<li><code>defaultFetch(callback)</code>: a convenience method to fetch the resource online.</li>
+</ul></li>
+<li><code>callback</code>: a function to be called with two arguments
+
+<ul>
+<li><code>error</code>: either <code>null</code>, if nothing goes wrong, or an <code>Error</code> object.</li>
+<li><code>body</code>: a string representing the body of the resource.</li>
+</ul></li>
+</ul>
+
+<p>For example, fetching all JS files from a different directory and running them in strict mode:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>({
+  url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://example.com/<span class="pl-pds">"</span></span>,
+  <span class="pl-en">resourceLoader</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">resource</span>, <span class="pl-smi">callback</span>) {
+    <span class="pl-k">var</span> pathname <span class="pl-k">=</span> <span class="pl-smi">resource</span>.<span class="pl-smi">url</span>.<span class="pl-c1">pathname</span>;
+    <span class="pl-k">if</span> (<span class="pl-sr"><span class="pl-pds">/</span><span class="pl-cce">\.</span>js<span class="pl-k">$</span><span class="pl-pds">/</span></span>.<span class="pl-c1">test</span>(pathname)) {
+      <span class="pl-smi">resource</span>.<span class="pl-smi">url</span>.<span class="pl-c1">pathname</span> <span class="pl-k">=</span> <span class="pl-smi">pathname</span>.<span class="pl-c1">replace</span>(<span class="pl-s"><span class="pl-pds">"</span>/js/<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>/js/raw/<span class="pl-pds">"</span></span>);
+      <span class="pl-k">return</span> <span class="pl-smi">resource</span>.<span class="pl-en">defaultFetch</span>(<span class="pl-k">function</span> (<span class="pl-smi">err</span>, <span class="pl-smi">body</span>) {
+        <span class="pl-k">if</span> (err) <span class="pl-k">return</span> <span class="pl-en">callback</span>(err);
+        <span class="pl-en">callback</span>(<span class="pl-c1">null</span>, <span class="pl-s"><span class="pl-pds">'</span>"use strict";<span class="pl-cce">\n</span><span class="pl-pds">'</span></span> <span class="pl-k">+</span> body);
+      });
+    } <span class="pl-k">else</span> {
+      <span class="pl-k">return</span> <span class="pl-smi">resource</span>.<span class="pl-en">defaultFetch</span>(callback);
+    }
+  },
+  features<span class="pl-k">:</span> {
+    FetchExternalResources<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>],
+    ProcessExternalResources<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>],
+    SkipExternalResources<span class="pl-k">:</span> <span class="pl-c1">false</span>
+  }
+});</pre></div>
+
+<p>You can return an object containing an <code>abort()</code> function which will be called if the window is closed or stopped before the request ends.
+The <code>abort()</code> function should stop the request and call the callback with an error.</p>
+
+<p>For example, simulating a long request:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>({
+  url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://example.com/<span class="pl-pds">"</span></span>,
+  <span class="pl-en">resourceLoader</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">resource</span>, <span class="pl-smi">callback</span>) {
+    <span class="pl-k">if</span> (<span class="pl-sr"><span class="pl-pds">/</span><span class="pl-cce">\.</span>json<span class="pl-k">$</span><span class="pl-pds">/</span></span>.<span class="pl-c1">test</span>(pathname)) {
+      <span class="pl-k">var</span> timeout <span class="pl-k">=</span> <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>() {
+        <span class="pl-en">callback</span>(<span class="pl-c1">null</span>, <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-cce">\"</span>test<span class="pl-cce">\"</span>:<span class="pl-cce">\"</span>test<span class="pl-cce">\"</span>}<span class="pl-pds">"</span></span>);
+      }, <span class="pl-c1">10000</span>);
+      <span class="pl-k">return</span> {
+        <span class="pl-en">abort</span><span class="pl-k">:</span> <span class="pl-k">function</span>() {
+          <span class="pl-c1">clearTimeout</span>(timeout);
+          <span class="pl-en">callback</span>(<span class="pl-k">new</span> <span class="pl-en">Error</span>(<span class="pl-s"><span class="pl-pds">"</span>request canceled by user<span class="pl-pds">"</span></span>));
+        }
+      };
+    } <span class="pl-k">else</span> {
+      <span class="pl-k">return</span> <span class="pl-smi">resource</span>.<span class="pl-en">defaultFetch</span>(callback);
+    }
+  },
+  features<span class="pl-k">:</span> {
+    FetchExternalResources<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>],
+    ProcessExternalResources<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>],
+    SkipExternalResources<span class="pl-k">:</span> <span class="pl-c1">false</span>
+  }
+});</pre></div>
+
+<h2><a id="user-content-canvas" class="anchor" href="#canvas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Canvas</h2>
+
+<p>jsdom includes support for using the <a href="https://npmjs.org/package/canvas">canvas</a> package to extend any <code>&lt;canvas&gt;</code> elements with the canvas API. To make this work, you need to include canvas as a dependency in your project, as a peer of jsdom. If jsdom can find the canvas package, it will use it, but if it's not present, then <code>&lt;canvas&gt;</code> elements will behave like <code>&lt;div&gt;</code>s.</p>
+
+<h2><a id="user-content-more-examples" class="anchor" href="#more-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Examples</h2>
+
+<h3><a id="user-content-creating-a-browser-like-window-object" class="anchor" href="#creating-a-browser-like-window-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a browser-like window object</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">jsdom</span>;
+<span class="pl-k">var</span> <span class="pl-c1">document</span> <span class="pl-k">=</span> <span class="pl-en">jsdom</span>(<span class="pl-s"><span class="pl-pds">"</span>hello world<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">document</span>.<span class="pl-c1">defaultView</span>;
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">window</span>.<span class="pl-smi">document</span>.<span class="pl-c1">documentElement</span>.<span class="pl-smi">outerHTML</span>);
+<span class="pl-c">// output: "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;hello world&lt;/body&gt;&lt;/html&gt;"</span>
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">window</span>.<span class="pl-c1">innerWidth</span>);
+<span class="pl-c">// output: 1024</span>
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-k">typeof</span> <span class="pl-smi">window</span>.<span class="pl-smi">document</span>.<span class="pl-smi">getElementsByClassName</span>);
+<span class="pl-c">// outputs: function</span></pre></div>
+
+<h3><a id="user-content-jqueryify" class="anchor" href="#jqueryify" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQueryify</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>().<span class="pl-c1">defaultView</span>;
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">jQueryify</span>(<span class="pl-c1">window</span>, <span class="pl-s"><span class="pl-pds">"</span>http://code.jquery.com/jquery-2.1.1.js<span class="pl-pds">"</span></span>, <span class="pl-k">function</span> () {
+  <span class="pl-smi">window</span>.<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>body<span class="pl-pds">"</span></span>).<span class="pl-en">append</span>(<span class="pl-s"><span class="pl-pds">'</span>&lt;div class="testing"&gt;Hello World, It works&lt;/div&gt;<span class="pl-pds">'</span></span>);
+
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">window</span>.<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>.testing<span class="pl-pds">"</span></span>).<span class="pl-c1">text</span>());
+});</pre></div>
+
+<h3><a id="user-content-passing-objects-to-scripts-inside-the-page" class="anchor" href="#passing-objects-to-scripts-inside-the-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Passing objects to scripts inside the page</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">jsdom</span>;
+<span class="pl-k">var</span> <span class="pl-c1">window</span> <span class="pl-k">=</span> <span class="pl-en">jsdom</span>().<span class="pl-c1">defaultView</span>;
+
+<span class="pl-smi">window</span>.<span class="pl-smi">__myObject</span> <span class="pl-k">=</span> { foo<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>bar<span class="pl-pds">"</span></span> };
+
+<span class="pl-k">var</span> scriptEl <span class="pl-k">=</span> <span class="pl-smi">window</span>.<span class="pl-smi">document</span>.<span class="pl-c1">createElement</span>(<span class="pl-s"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>);
+<span class="pl-smi">scriptEl</span>.<span class="pl-smi">src</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>anotherScript.js<span class="pl-pds">"</span></span>;
+<span class="pl-smi">window</span>.<span class="pl-smi">document</span>.<span class="pl-c1">body</span>.<span class="pl-c1">appendChild</span>(scriptEl);
+
+<span class="pl-c">// anotherScript.js will have the ability to read `window.__myObject`, even</span>
+<span class="pl-c">// though it originated in Node.js/io.js!</span></pre></div>
+
+<h3><a id="user-content-serializing-a-document" class="anchor" href="#serializing-a-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Serializing a document</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">jsdom</span>;
+<span class="pl-k">var</span> serializeDocument <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>).<span class="pl-smi">serializeDocument</span>;
+
+<span class="pl-k">var</span> doc <span class="pl-k">=</span> <span class="pl-en">jsdom</span>(<span class="pl-s"><span class="pl-pds">"</span>&lt;!DOCTYPE html&gt;hello<span class="pl-pds">"</span></span>);
+
+<span class="pl-en">serializeDocument</span>(doc) <span class="pl-k">===</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;hello&lt;/body&gt;&lt;/html&gt;<span class="pl-pds">"</span></span>;
+<span class="pl-smi">doc</span>.<span class="pl-c1">documentElement</span>.<span class="pl-smi">outerHTML</span> <span class="pl-k">===</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;hello&lt;/body&gt;&lt;/html&gt;<span class="pl-pds">"</span></span>;</pre></div>
+
+<h3><a id="user-content-sharing-cookie-state-among-pages" class="anchor" href="#sharing-cookie-state-among-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sharing cookie state among pages</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> cookieJar <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">createCookieJar</span>();
+
+<span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>({
+    url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>http://google.com<span class="pl-pds">'</span></span>,
+    cookieJar<span class="pl-k">:</span> cookieJar,
+    <span class="pl-en">done</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">err1</span>, <span class="pl-smi">window1</span>) {
+        <span class="pl-c">//...</span>
+
+        <span class="pl-smi">jsdom</span>.<span class="pl-en">env</span>({
+            url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>http://code.google.com<span class="pl-pds">'</span></span>,
+            cookieJar<span class="pl-k">:</span> cookieJar,
+            <span class="pl-en">done</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">err2</span>, <span class="pl-smi">window2</span>) {
+                <span class="pl-c">//...</span>
+            }
+        });
+    }
+});</pre></div>
+
+<h3><a id="user-content-capturing-console-output" class="anchor" href="#capturing-console-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>Capturing Console Output</h3>
+
+<h4><a id="user-content-forward-a-windows-console-output-to-the-nodejsiojs-console" class="anchor" href="#forward-a-windows-console-output-to-the-nodejsiojs-console" aria-hidden="true"><span class="octicon octicon-link"></span></a>Forward a window's console output to the Node.js/io.js console</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-k">var</span> <span class="pl-c1">document</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-c1">undefined</span>, {
+  virtualConsole<span class="pl-k">:</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">createVirtualConsole</span>().<span class="pl-en">sendTo</span>(<span class="pl-en">console</span>)
+});</pre></div>
+
+<p>By default this will forward all <code>"jsdomError"</code> events to <code>console.error</code>. If you want to maintain only a strict one-to-one mapping of events to method calls, and perhaps handle <code>"jsdomErrors"</code> yourself, then you can do <code>sendTo(console, { omitJsdomErrors: true })</code>.</p>
+
+<h4><a id="user-content-create-an-event-emitter-for-a-windows-console" class="anchor" href="#create-an-event-emitter-for-a-windows-console" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create an event emitter for a window's console</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-k">var</span> virtualConsole <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">createVirtualConsole</span>();
+
+<span class="pl-smi">virtualConsole</span>.<span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">"</span>log<span class="pl-pds">"</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">message</span>) {
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>console.log called -&gt;<span class="pl-pds">"</span></span>, message);
+});
+
+<span class="pl-k">var</span> <span class="pl-c1">document</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-c1">undefined</span>, {
+  virtualConsole<span class="pl-k">:</span> virtualConsole
+});</pre></div>
+
+<p>Post-initialization, if you didn't pass in a <code>virtualConsole</code> or no longer have a reference to it, you can retreive the <code>virtualConsole</code> by using:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> virtualConsole <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">getVirtualConsole</span>(<span class="pl-c1">window</span>);</pre></div>
+
+<h4><a id="user-content-virtual-console-jsdomerror-error-reporting" class="anchor" href="#virtual-console-jsdomerror-error-reporting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Virtual console <code>jsdomError</code> error reporting</h4>
+
+<p>Besides the usual events, corresponding to <code>console</code> methods, the virtual console is also used for reporting errors from jsdom itself. This is similar to how error messages often show up in web browser consoles, even if they are not initiated by <code>console.error</code>. So far, the following errors are output this way:</p>
+
+<ul>
+<li>Errors loading external resources (scripts, stylesheets, frames, and iframes)</li>
+<li>Script execution errors that are not handled by a window <code>onerror</code> event handler that returns <code>true</code> or calls <code>event.preventDefault()</code></li>
+<li>Calls to methods, like <code>window.alert</code>, which jsdom does not implement, but installs anyway for web compatibility</li>
+</ul>
+
+<h3><a id="user-content-getting-a-nodes-location-within-the-source" class="anchor" href="#getting-a-nodes-location-within-the-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting a node's location within the source</h3>
+
+<p>To find where a DOM node is within the source document, we provide the <code>jsdom.nodeLocation</code> function:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> jsdom <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>jsdom<span class="pl-pds">"</span></span>);
+
+<span class="pl-k">var</span> <span class="pl-c1">document</span> <span class="pl-k">=</span> <span class="pl-smi">jsdom</span>.<span class="pl-en">jsdom</span>(<span class="pl-s"><span class="pl-pds">`</span>&lt;p&gt;Hello</span>
+<span class="pl-s">    &lt;img src="foo.jpg"&gt;</span>
+<span class="pl-s">  &lt;/p&gt;<span class="pl-pds">`</span></span>);
+
+<span class="pl-k">var</span> bodyEl <span class="pl-k">=</span> <span class="pl-smi">document</span>.<span class="pl-c1">body</span>; <span class="pl-c">// implicitly created</span>
+<span class="pl-k">var</span> pEl <span class="pl-k">=</span> <span class="pl-smi">document</span>.<span class="pl-en">querySelector</span>(<span class="pl-s"><span class="pl-pds">"</span>p<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> textNode <span class="pl-k">=</span> <span class="pl-smi">pEl</span>.<span class="pl-c1">firstChild</span>;
+<span class="pl-k">var</span> imgEl <span class="pl-k">=</span> <span class="pl-smi">document</span>.<span class="pl-en">querySelector</span>(<span class="pl-s"><span class="pl-pds">"</span>img<span class="pl-pds">"</span></span>);
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">jsdom</span>.<span class="pl-en">nodeLocation</span>(bodyEl));   <span class="pl-c">// null; it's not in the source</span>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">jsdom</span>.<span class="pl-en">nodeLocation</span>(pEl));      <span class="pl-c">// { start: 0, end: 39, startTag: ..., endTag: ... }</span>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">jsdom</span>.<span class="pl-en">nodeLocation</span>(textNode)); <span class="pl-c">// { start: 3, end: 13 }</span>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">jsdom</span>.<span class="pl-en">nodeLocation</span>(imgEl));    <span class="pl-c">// { start: 13, end: 32 }</span></pre></div>
+
+<p>This returns the <a href="https://www.npmjs.com/package/parse5#options-locationinfo">parse5 location info</a> for the node.</p>
+
+<h4><a id="user-content-overriding-windowtop" class="anchor" href="#overriding-windowtop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding <code>window.top</code></h4>
+
+<p>The <code>top</code> property on <code>window</code> is marked <code>[Unforgeable]</code> in the spec, meaning it is a non-configurable own property and thus cannot be overridden or shadowed by normal code running inside the jsdom window, even using <code>Object.defineProperty</code>. However, if you're acting from outside the window, e.g. in some test framework that creates jsdom instances, you can override it using the special <code>jsdom.reconfigureWindow</code> function:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">jsdom</span>.<span class="pl-en">reconfigureWindow</span>(<span class="pl-c1">window</span>, { top<span class="pl-k">:</span> myFakeTopForTesting });</pre></div>
+
+<p>In the future we may expand <code>reconfigureWindow</code> to allow overriding other <code>[Unforgeable]</code> properties. Let us know if you need this capability.</p>
+
+<h2><a id="user-content-what-standards-does-jsdom-support-exactly" class="anchor" href="#what-standards-does-jsdom-support-exactly" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Standards Does jsdom Support, Exactly?</h2>
+
+<p>Our mission is to get something very close to a headless browser, with emphasis more on the DOM/HTML side of things than the CSS side. As such, our primary goals are supporting <a href="http://dom.spec.whatwg.org/">The DOM Standard</a> and <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/">The HTML Standard</a>. We only support some subset of these so far; in particular we have the subset covered by the outdated DOM 2 spec family down pretty well. We're slowly including more and more from the modern DOM and HTML specs, including some <code>Node</code> APIs, <code>querySelector(All)</code>, attribute semantics, the history and URL APIs, and the HTML parsing algorithm.</p>
+
+<p>We also support some subset of the <a href="http://dev.w3.org/csswg/cssom/">CSSOM</a>, largely via <a href="https://github.com/chad3814">@chad3814</a>'s excellent <a href="https://www.npmjs.org/package/cssstyle">cssstyle</a> package. In general we want to make webpages run headlessly as best we can, and if there are other specs we should be incorporating, let us know.</p>
+</article>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span aria-hidden="true" class="mega-octicon octicon-mark-github" title="GitHub "></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.07343s from github-fe118-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span aria-hidden="true" class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span aria-hidden="true" class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-2895475c714f13790b63e636b5389a6918a260259c5b22a15acf5ef26bd6ef09.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-c0404608a3bcd1310776df0ab26e107bfd70ff0382408f43ede1a81e730e39cd.js"></script>
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span aria-hidden="true" class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <span aria-hidden="true" class="octicon octicon-x"></span>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

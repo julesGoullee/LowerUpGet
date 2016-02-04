@@ -14,7 +14,7 @@ function checkGetAddressParams(address){
 
   let isValid = false;
 
-  // TODO check url.query.address
+  // T.ODO check url.query.address
   if(address && address.length > 1){
 
     isValid = true;
