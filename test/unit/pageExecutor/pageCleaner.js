@@ -90,6 +90,58 @@ describe('Page Cleaner', () => {
 
     });
 
+    it('Should rm style inline after execute', (done) => {
+
+      const page = `<div></div><style>.pmoabs{background-color:#fff;border:1px solid #E5E5E5;color:#666;font-size:13px;}</style>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<div></div>`);
+        done();
+
+      });
+
+    });
+
+    it('Should rm inline-style background image', (done) => {
+
+      const page = `<div style="background-image: url('http://google.fr/logo.png');"></div>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<div style=""></div>`);
+        done();
+
+      });
+
+    });
+    
+    it('Should transform relative path in link href', (done) => {
+
+      const page = `<a href="/search?blabla=1"></a>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<a href="about:///search?blabla=1"></a>`);
+        done();
+
+      });
+
+    });
+
+    it('Should transform relative action in form', (done) => {
+
+      const page = `<form action="/action"></form>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<form action="about:///action"></form>`);
+        done();
+
+      });
+
+    });
+    
   });
 
 });
