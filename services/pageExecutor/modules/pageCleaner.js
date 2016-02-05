@@ -1,25 +1,10 @@
 'use strict';
 
-/**
- * Represents a book.
- * @param {Array} tagsNames - Array of Name tag to remove
- * @param {Object} window - Current document window
- */
-function removeAllElementsByTagsNames(tagsNames, window){
-
-  for(const tagName of tagsNames){
-
-    const tags = window.document.getElementsByTagName(tagName);
-
-    for(let i = 0; i < tags.length; i++){
-
-      tags[i].parentNode.removeChild(tags[i]);
-
-    }
-
-  }
-
-}
+const filter = {
+  'tagsNames': require('./filters/byTagsNames'),
+  'styles': require('./filters/byStyles'),
+  'links': require('./filters/byLinks')
+};
 
 /**
  * PageCleaner clean link, en apply style
@@ -28,7 +13,9 @@ function removeAllElementsByTagsNames(tagsNames, window){
  */
 function PageCleaner(window){
 
-  removeAllElementsByTagsNames(['script', 'noscript', 'img', 'svg', 'iframe'], window);
+  filter.tagsNames(['script', 'noscript', 'img', 'svg', 'iframe', 'style'], window);
+  filter.styles(window);
+  filter.links(window);
 
   const html = window.document.body.innerHTML;
 
