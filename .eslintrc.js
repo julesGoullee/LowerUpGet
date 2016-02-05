@@ -10,7 +10,7 @@ module.exports = {
     'blockBindings': true,                        // enable let and const (aka block bindings)
     'classes': false,                             // enable classes
     'defaultParams': false,                       // enable default function parameters
-    'destructuring': true,                       // enable destructuring
+    'destructuring': true,                        // enable destructuring
     'forOf': true,                                // enable for-of loops
     'generators': false,                          // enable generators
     'modules': false,                             // enable modules and global strict mode
@@ -24,7 +24,7 @@ module.exports = {
     'restParams': false,                          // enable the rest parameters
     'spread': false,                              // enable the spread operator for arrays
     'superInFunctions': false,                    // enable super references inside of functions
-    'templateStrings': true,                     // enable template strings
+    'templateStrings': true,                      // enable template strings
     'unicodeCodePointEscapes': false,             // enable code point escapes
     'globalReturn': false,                        // allow return statements in the global scope
     'jsx': false,                                 // enable JSX
@@ -38,7 +38,7 @@ module.exports = {
     'jquery': false,                              // jquery global variables.
     'commonjs': false,                            // CommonJS global variables and CommonJS scoping
     'amd': false,                                 // defines require() and define() as global variables as per the amd spec.
-    'mocha': true,                               // adds all of the Mocha testing global variables.
+    'mocha': true,                                // adds all of the Mocha testing global variables.
     'worker': false,                              // Web workers global variables.
     'jasmine': false,                             // adds all of the Jasmine testing global variables for version 1.3 and 2.0.
     'phantomjs': false,                           // phantomjs global variables.
@@ -295,7 +295,7 @@ module.exports = {
       'functions': 'never',
       'keywords': 'never'
     }],
-    'space-before-function-paren': [2, 'never'], // require or disallow a space before function opening parenthesis (fixable)
+    'space-before-function-paren': [2, 'never'],  // require or disallow a space before function opening parenthesis (fixable)
     'space-before-keywords': [2, 'always'],       // require a space before certain keywords (fixable)
     'space-in-parens': [2, 'never', {             // require or disallow spaces inside parentheses
       'exceptions': [
