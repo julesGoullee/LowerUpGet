@@ -135,13 +135,26 @@ describe('Page Cleaner', () => {
 
   describe('transform href, form, a address', () => {
 
-    it('Should transform path in link href', (done) => {
+    it('Should transform absolute path in link href', (done) => {
 
       const page = `<a href="http://google.fr/search?blabla=1"></a>`;
 
       getWindow(page, (html) => {
 
         expect(html).to.equal(`<a href="${apiCallUrl}http://google.fr/search?blabla=1"></a>`);
+        done();
+
+      });
+
+    });
+
+    it('Should ignore invalide path in link href', (done) => {
+
+      const page = `<a ></a>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<a></a>`);
         done();
 
       });
