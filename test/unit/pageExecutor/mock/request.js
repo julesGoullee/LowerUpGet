@@ -1,12 +1,12 @@
 'use strict';
 
-const mock = require('mock-require');
+const _require = require('mock-require');
 
-const mockedRequest = {};
+const _request = {};
 
-mockedRequest.get = (req, cb) => {
-
-  console.info('Mock request called');
+_request.get = (req, cb) => {
+  
+  console.info('Mock request called', req);
   
   const res = {
     'statusCode': 200
@@ -16,9 +16,9 @@ mockedRequest.get = (req, cb) => {
   
 };
 
-module.exports = () => {
-  
-  mock('request', mockedRequest);
-  return mock;
+module.exports = () => {
+
+  _require('request', _request);
+  return { _require, _request };
 
 };
