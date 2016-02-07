@@ -10,9 +10,10 @@
     "api:start": "node services/api/api.js",
     "page-executor:start": "node services/pageExecutor/singleInstance.js",
     "pm2:start": "npm run logs:clean && pm2 start config/pm2-app.json",
-    "logs:clean": "rm -R ./logs/**",
-    "lint": "eslint . --fix",
-    "test": "mocha -R spec ./test/unit/test.config.js ./test/unit/**/*.js"
+    "logs:clean": "rm -rf ./logs/**",
+    "lint": "eslint .",
+    "test": "mocha -R spec ./test/unit/test.config.js ./test/unit/**/*.js",
+    "travis": "npm run lint && npm test"
   },
   "keywords": [
     "web",
@@ -25,11 +26,11 @@
   "author": "Jules Goullée",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.1.1",
+    "bluebird": "^3.2.2",
     "forever": "^0.15.1",
     "jsdom": "^8.0.2",
     "pm2": "^1.0.0",
-    "request": "^2.67.0"
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
