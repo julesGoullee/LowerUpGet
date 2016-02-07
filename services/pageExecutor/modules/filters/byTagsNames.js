@@ -2,10 +2,10 @@
 
 /**
  * Remove all specific tagsNames
- * @param {Array} tagsNames - Array of Name tag to remove
  * @param {Object} window - Current document window
+ * @param {Array} tagsNames - Array of Name tag to remove
  */
-function removeAllElementsByTagsNames(tagsNames, window){
+function removeAllElementsByTagsNames(window, tagsNames){
 
   for(const tagName of tagsNames){
 

@@ -1,9 +1,13 @@
 'use strict';
 
+const FilterByTagsNames = require('./filters/byTagsNames');
+const FilterByLinks = require('./filters/byLinks');
+const FilterByStyles = require('./filters/byStyles');
+
 const filter = {
-  'tagsNames': require('./filters/byTagsNames'),
-  'styles': require('./filters/byStyles'),
-  'links': require('./filters/byLinks')
+  'tagsNames': FilterByTagsNames,
+  'styles': FilterByStyles,
+  'links': FilterByLinks
 };
 
 /**
@@ -12,8 +16,8 @@ const filter = {
  * @return {String} html - pure html string
  */
 function PageCleaner(window){
-
-  filter.tagsNames(['script', 'noscript', 'img', 'svg', 'iframe', 'style'], window);
+  
+  filter.tagsNames(window, ['script', 'noscript', 'link', 'img', 'svg', 'iframe', 'style']);
   filter.styles(window);
   filter.links(window);
 

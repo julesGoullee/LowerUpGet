@@ -4,6 +4,8 @@
 
 const jsdom = require('jsdom');
 
+const config = require('../../../config/config');
+const apiCallUrl = `${config.frontEnd.address}/get?address=`;
 const pageCleaner = require('../../../services/pageExecutor/modules/pageCleaner');
 
 /**
@@ -41,6 +43,19 @@ describe('Page Cleaner', () => {
     it('Should rm img', (done) => {
 
       const page = `<div><img alt="@kasperisager" class="avatar" height="20" src="" width="20" /></div>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<div></div>`);
+        done();
+
+      });
+
+    });
+
+    it('Should rm link', (done) => {
+
+      const page = `<div><link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/style.css"></div>`;
 
       getWindow(page, (html) => {
 
@@ -116,13 +131,30 @@ describe('Page Cleaner', () => {
 
     });
     
+  });
+
+  describe('transform href, form, a address', () => {
+
+    it('Should transform path in link href', (done) => {
+
+      const page = `<a href="http://google.fr/search?blabla=1"></a>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<a href="${apiCallUrl}http://google.fr/search?blabla=1"></a>`);
+        done();
+
+      });
+
+    });
+    
     it('Should transform relative path in link href', (done) => {
 
       const page = `<a href="/search?blabla=1"></a>`;
 
       getWindow(page, (html) => {
 
-        expect(html).to.equal(`<a href="about:///search?blabla=1"></a>`);
+        expect(html).to.equal(`<a href="${apiCallUrl}about:///search?blabla=1"></a>`);
         done();
 
       });
@@ -135,7 +167,7 @@ describe('Page Cleaner', () => {
 
       getWindow(page, (html) => {
 
-        expect(html).to.equal(`<form action="about:///action"></form>`);
+        expect(html).to.equal(`<form action="${apiCallUrl}about:///action"></form>`);
         done();
 
       });
@@ -143,5 +175,5 @@ describe('Page Cleaner', () => {
     });
     
   });
-
+  
 });
