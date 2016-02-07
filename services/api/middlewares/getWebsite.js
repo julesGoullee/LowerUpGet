@@ -93,27 +93,38 @@ function getPureHtml(pageExecutorRequest){
  */
 function getWebsite(req, res, next){
 
-  if(req.url.pathname !== '/get'){
+  const urlFrag = req.url.pathname.split('/');
+
+  if(urlFrag.length < 3 ||  urlFrag[1] !== 'get'){
 
     return next();
 
   }
 
-  if(!checkGetAddressParams(req.url.query.address) ){
+  if(!checkGetAddressParams(urlFrag[2]) ){
 
     res.writeHead(400);
     return res.end('Address url incorrect');
 
   }
 
-  const pageExecutorRequest = `${config.PageExecutor.address}:${config.PageExecutor.port}/get?address=${req.url.query.address}`;
+  const decodeAddress = decodeURIComponent(urlFrag[2]);
+  let decodePath = '';
+  
+  if(urlFrag[3]){
+    
+    decodePath = decodeURIComponent(urlFrag[3]);
+    
+  }
+  
+  const pageExecutorRequest = `${config.PageExecutor.address}:${config.PageExecutor.port}/get?address=${decodeAddress}${decodePath}`;
   const startTimePageExecutor = Date.now();
 
   getPureHtml(pageExecutorRequest).then( (data) => {
 
     const timePageExecutor = Date.now() - startTimePageExecutor;
 
-    console.log(`Api process for address: ${req.url.query.address}, Time: ${timePageExecutor}m`);
+    console.log(`Api process for address: ${decodeAddress}, Time: ${timePageExecutor}m`);
 
     const headers = Object.assign({}, {
       'Access-Control-Allow-Origin': '*',
