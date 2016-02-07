@@ -11,7 +11,7 @@ module.exports = {
     'cache': {
       'active': true
     },
-    'address': 'http://localhost',
+    'address': process.env.FRONT_END_ADDRESS || 'http://localhost:4000',
     'port': process.env.PORT || 3000
   }
 };

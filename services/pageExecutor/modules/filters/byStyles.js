@@ -6,9 +6,9 @@
  */
 function removeBackgroundsUrls(window){
 
-  const all = window.document.getElementsByTagName("*");
+  const all = window.document.getElementsByTagName('*');
 
-  for (let i = 0; i < all.length; i++) {
+  for(let i = 0; i < all.length; i++){
 
     all[i].style.removeProperty('background-image');
     all[i].style.removeProperty('background');

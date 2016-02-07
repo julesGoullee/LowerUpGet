@@ -18,6 +18,7 @@
       "script"    : "./services/pageExecutor/index.js",
       "env": {
         "NODE_ENV": "production",
+          "FRONT_END_ADDRESS": "http://lower-up-get.herokuapp.com",
         "PORT": 4000
       },
       "instances"  : 1,
