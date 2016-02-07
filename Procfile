@@ -1,1 +1,1 @@
-app: bash ./conifg/start_heroku.sh
+web: bash ./config/start_heroku.sh
