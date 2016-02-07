@@ -13,9 +13,9 @@ Launch app on your phone:
 - node@5 (use nvm [https://github.com/creationix/nvm](https://github.com/creationix/nvm))
 
 ##API Documentation:
-- Get page via url:
+- Get page via url(Urlencoded):
     
-    https://lower-up-get.herokuapp.com/get?address=https://google.fr
+    https://lower-up-get.herokuapp.com/get/https%3A%2F%2Fduckduckgo.com
 
 ##Developpement
 - Npm Dependencies:

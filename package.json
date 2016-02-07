@@ -8,7 +8,7 @@
   },
   "scripts": {
     "api:start": "node services/api/api.js",
-    "page-executor:start": "node services/pageExecutor/singleInstance.js",
+    "page-executor:start": "node services/pageExecutor/index.js",
     "pm2:start": "npm run logs:clean && pm2 start config/pm2-app.json",
     "logs:clean": "rm -rf ./logs/**",
     "lint": "eslint .",

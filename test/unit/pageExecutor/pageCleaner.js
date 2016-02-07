@@ -5,7 +5,7 @@
 const jsdom = require('jsdom');
 
 const config = require('../../../config/config');
-const apiCallUrl = `${config.frontEnd.address}/get?address=`;
+const apiCallUrl = `${config.frontEnd.address}/get/`;
 const pageCleaner = require('../../../services/pageExecutor/modules/pageCleaner');
 
 /**
@@ -22,7 +22,7 @@ function getWindow(html, cb){
       'ProcessExternalResources': ['script', 'link']
     },
     'done': (err, window) => {
-
+      
       if(err){
 
         throw err;
@@ -137,17 +137,30 @@ describe('Page Cleaner', () => {
 
     it('Should transform absolute path in link href', (done) => {
 
-      const page = `<a href="http://google.fr/search?blabla=1"></a>`;
+      const page = `<a href="http://google.fr"></a>`;
 
       getWindow(page, (html) => {
 
-        expect(html).to.equal(`<a href="${apiCallUrl}http://google.fr/search?blabla=1"></a>`);
+        expect(html).to.equal(`<a href="${apiCallUrl}http%3A%2F%2Fgoogle.fr"></a>`);
         done();
 
       });
 
     });
 
+    it('Should transform absolute path with params in link href', (done) => {
+
+      const page = `<a href="http://google.fr?blabla=1"></a>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<a href="${apiCallUrl}http%3A%2F%2Fgoogle.fr?blabla=1"></a>`);
+        done();
+
+      });
+
+    });
+    
     it('Should ignore invalide path in link href', (done) => {
 
       const page = `<a ></a>`;
@@ -163,24 +176,37 @@ describe('Page Cleaner', () => {
     
     it('Should transform relative path in link href', (done) => {
 
-      const page = `<a href="/search?blabla=1"></a>`;
+      const page = `<a href="/search"></a>`;
 
       getWindow(page, (html) => {
 
-        expect(html).to.equal(`<a href="${apiCallUrl}about:///search?blabla=1"></a>`);
+        expect(html).to.equal(`<a href="${apiCallUrl}about%3A%2F%2F/%2Fsearch"></a>`);
         done();
 
       });
 
     });
 
-    it('Should transform relative action in form', (done) => {
+    it('Should transform relative path with params in link href', (done) => {
+
+      const page = `<a href="/search?blabla=1"></a>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<a href="${apiCallUrl}about%3A%2F%2F/%2Fsearch?blabla=1"></a>`);
+        done();
+
+      });
+
+    });
+    
+    it('Should transform relative path action in form', (done) => {
 
       const page = `<form action="/action"></form>`;
 
       getWindow(page, (html) => {
 
-        expect(html).to.equal(`<form action="${apiCallUrl}about:///action"></form>`);
+        expect(html).to.equal(`<form action="${apiCallUrl}about%3A%2F%2F/%2Faction" method="GET"></form>`);
         done();
 
       });

@@ -4,6 +4,7 @@ const pageExecutor = require('./modules/pageExecutor');
 const httpServe = require('./modules/httpServe');
 const Promise = require('bluebird');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 /**
  * Listen http request from api process to execute page

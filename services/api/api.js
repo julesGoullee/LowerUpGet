@@ -7,7 +7,7 @@ const middlewaresError = require('./middlewares/error');
 const port = config.frontEnd.port;
 const middlewares = new Set();
 
-middlewares.add(require('./middlewares/parser') );
+//middlewares.add(require('./middlewares/parser') );
 middlewares.add(require('./middlewares/example') );
 middlewares.add(require('./middlewares/getWebsite') );
 middlewares.add(middlewaresError);
