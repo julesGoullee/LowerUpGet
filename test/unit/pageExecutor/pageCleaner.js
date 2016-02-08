@@ -118,7 +118,7 @@ describe('Page Cleaner', () => {
 
     });
 
-    it('Should rm inline-style background image', (done) => {
+    it('Should rm inline-style background image only this property define', (done) => {
 
       const page = `<div style="background-image: url('http://google.fr/logo.png');"></div>`;
 
@@ -130,7 +130,46 @@ describe('Page Cleaner', () => {
       });
 
     });
-    
+
+    it('Should rm inline-style correct background image only this property', (done) => {
+
+      const page = `<div style="background-image: url('http://google.fr/logo.png')"></div>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<div style=""></div>`);
+        done();
+
+      });
+
+    });
+
+    it('Should rm inline-style correct background image and multiple property', (done) => {
+
+      const page = `<div style="background-image: url('http://google.fr/logo.png');height:37px;width:95px;display:block"></div>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<div style="height: 37px; width: 95px; display: block;"></div>`);
+        done();
+
+      });
+
+    });
+
+    it('Should rm inline-style background image without url quote(jsdom bug)', (done) => {
+
+      const page = `<div style="background:url(/images/nav_logo229.png);height:37px;width:95px;display:block"></div>`;
+
+      getWindow(page, (html) => {
+
+        expect(html).to.equal(`<div style=""></div>`);
+        done();
+
+      });
+
+    });
+
   });
 
   describe('transform href, form, a address', () => {
