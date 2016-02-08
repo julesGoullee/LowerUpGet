@@ -49,7 +49,8 @@ module.exports = {
   },
 
   'globals': {
-    'expect' : true
+    'expect': true,
+    'chai': true
   },
 
   'plugins': [],
@@ -233,7 +234,7 @@ module.exports = {
       'beforeBlockComment': true,
       'beforeLineComment': true
     }],
-    'max-depth': [2, 2],                          // specify the maximum depth that blocks can be nested
+    'max-depth': [2, 3],                          // specify the maximum depth that blocks can be nested
     'max-len': [2, 150, 4],                       // specify the maximum length of a line in your program
     'max-nested-callbacks': [2, 3],               // specify the maximum depth callbacks can be nested
     'max-params': [2, 4],                         // limits the number of parameters that can be used in the function declaration.

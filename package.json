@@ -8,11 +8,11 @@
   },
   "scripts": {
     "api:start": "node services/api/api.js",
-    "page-executor:start": "node services/pageExecutor/singleInstance.js",
+    "page-executor:start": "node services/pageExecutor/index.js",
     "pm2:start": "npm run logs:clean && pm2 start config/pm2-app.json",
     "logs:clean": "rm -rf ./logs/**",
     "lint": "eslint .",
-    "test": "mocha -R spec ./test/unit/test.config.js ./test/unit/**/*.js",
+    "test": "mocha -R spec ./test/unit/test.config.js ./test/unit/**/*.js --timeout 5000",
     "travis": "npm run lint && npm test"
   },
   "keywords": [
@@ -34,7 +34,9 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
     "eslint": "^1.10.3",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "mock-require": "^1.2.1"
   }
 }

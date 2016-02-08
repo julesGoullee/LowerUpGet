@@ -1,6 +1,8 @@
 'use strict';
 
-const chai = require('chai');
+global.chai = require('chai');
+global.expect = global.chai.expect;
 
-global.chai = chai;
-global.expect = chai.expect;
+const spy = require('chai-spies');
+
+global.chai.use(spy);

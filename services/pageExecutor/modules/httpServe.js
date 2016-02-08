@@ -1,7 +1,6 @@
 'use strict';
 
 
-const Url = require('url');
 const http = require('http');
 
 const config = require('../../../config/config');
@@ -11,11 +10,11 @@ module.exports = (cb) => {
 
   http.createServer( (req, res) => {
 
-    const url = Url.parse(req.url, '?');
+    if(req.url.indexOf('/get?address=') === 0){
 
-    if(url.pathname === '/get' && url.query.address){
+      const requestUrl = req.url.slice(13, req.url.length);
 
-      cb(url.query.address).then( (htmlContent) => {
+      cb(requestUrl).then( (htmlContent) => {
 
         res.writeHead(200, {
           'Content-Type': 'text/html; charset=UTF-8',
@@ -31,7 +30,7 @@ module.exports = (cb) => {
           'Content-Type': 'text/html; charset=UTF-8',
           'Content-length': Buffer.byteLength(err.toString(), 'utf-8')
         });
-        
+
         res.end(err.toString() );
 
       });

@@ -1,34 +1,80 @@
 'use strict';
 
 const config = require('../../../../config/config');
+const Url = require('url');
 
-const apiCallUrl = `${config.frontEnd.address}/get?address=`;
+const apiCallUrlBase = `${config.frontEnd.address}/get/`;
+
+/**
+ * Create url to call api
+ * @param {String} address - url address
+ * @param {String} path - url path
+ * @param {String} params - url params
+ * @return {String} url encoded
+ */
+function encodeUrl(address, path, params){
+  
+  let apiCall = apiCallUrlBase + encodeURIComponent(address);
+  
+  if(path){
+    
+    apiCall += `/${encodeURIComponent(path)}`;
+
+  }
+  
+  if(params){
+
+    apiCall += params;
+
+  }
+  
+  return apiCall;
+
+}
 
 /**
  * Transform url absolute or relative to api call
- * @param {String} url - source url
+ * @param {Object} url - source url parsed
  * @param {String} host - source host
  * @param {String} protocol - source protocol
  * @return {String} api call url
  */
 function transformUrlToLowerUpGetUrl(url, host, protocol){
   
-  let validUrl = url;
+  let path = '';
+  let params = '';
+  let address = '';
   
-  if(url.indexOf('/') === 0){
+  if(url.href && url.href.indexOf('/') === 0){
+    
+    address = `${protocol}//${host}`;
 
-    validUrl = `${protocol}//${host}${url}`;
+  } else{
+    
+    address = `${url.protocol}//${url.host}`;
+    
+  }
+  
+  if(url.pathname && url.pathname.length > 1){
+
+    path = url.pathname;
 
   }
   
-  return `${apiCallUrl}${validUrl}`;
+  if(url.search && url.search.length > 1){
+    
+    params = url.search;
+        
+  }
+  
+  return encodeUrl(address, path, params);
   
 }
 
 /**
  * Get dom attribute url switch dom type
  * @param {HTMLElement} domEl - dom element
- * @return {Boolean|String} false if attribute empty or value
+ * @return {Boolean|Object} false if attribute empty or url object parse
  */
 function getUrl(domEl){
   
@@ -39,14 +85,19 @@ function getUrl(domEl){
     url = domEl.getAttribute('href');
     
   } else if(domEl.tagName === 'FORM'){
-    
+
     url = domEl.getAttribute('action');
+    domEl.setAttribute('method', 'GET');
 
   }
   
   if(!url || url.length < 1){
     
     url = false;
+    
+  } else{
+    
+    url = Url.parse(url, '?');
     
   }
   
@@ -62,7 +113,6 @@ function transformRelativesHrefsPaths(window){
 
   const links = window.document.getElementsByTagName('a');
   
-  //encodeURIComponent
   const protocol = window.location.protocol;
   const host = window.location.hostname;
   
@@ -72,7 +122,9 @@ function transformRelativesHrefsPaths(window){
     
     if(url){
 
-      links[i].setAttribute('href', transformUrlToLowerUpGetUrl(url, host, protocol) );
+      const apiCallUrl = transformUrlToLowerUpGetUrl(url, host, protocol);
+      
+      links[i].setAttribute('href', apiCallUrl);
       
     }
 
@@ -88,7 +140,6 @@ function transformRelativesActionsPaths(window){
 
   const form = window.document.getElementsByTagName('form');
   
-  //encodeURIComponent
   const protocol = window.location.protocol;
   const host = window.location.hostname;
 
@@ -96,9 +147,11 @@ function transformRelativesActionsPaths(window){
 
     const url = getUrl(form[i]);
     
-    if(url){
+    const apiCallUrl = transformUrlToLowerUpGetUrl(url, host, protocol);
+    
+    if(apiCallUrl){
 
-      form[i].setAttribute('action', transformUrlToLowerUpGetUrl(url, host, protocol) );
+      form[i].setAttribute('action', apiCallUrl);
 
     }
     
